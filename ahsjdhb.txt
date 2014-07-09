@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 nkhoh
+=======
+ce ne mai place github
+
+>>>>>>> origin/master
