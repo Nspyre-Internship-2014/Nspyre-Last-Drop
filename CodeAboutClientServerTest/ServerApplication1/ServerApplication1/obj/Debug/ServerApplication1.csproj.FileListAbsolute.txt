@@ -1,0 +1,5 @@
+c:\users\ionut\documents\visual studio 2012\Projects\ServerApplication1\ServerApplication1\bin\Debug\ServerApplication1.exe.config
+c:\users\ionut\documents\visual studio 2012\Projects\ServerApplication1\ServerApplication1\bin\Debug\ServerApplication1.exe
+c:\users\ionut\documents\visual studio 2012\Projects\ServerApplication1\ServerApplication1\bin\Debug\ServerApplication1.pdb
+c:\users\ionut\documents\visual studio 2012\Projects\ServerApplication1\ServerApplication1\obj\Debug\ServerApplication1.exe
+c:\users\ionut\documents\visual studio 2012\Projects\ServerApplication1\ServerApplication1\obj\Debug\ServerApplication1.pdb

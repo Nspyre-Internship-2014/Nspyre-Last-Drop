@@ -1,0 +1,5 @@
+c:\users\ionut\documents\visual studio 2012\Projects\ClientApplication1\ClientApplication1\bin\Debug\ClientApplication1.exe.config
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\ClientApplication1\ClientApplication1\bin\Debug\ClientApplication1.exe
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\ClientApplication1\ClientApplication1\bin\Debug\ClientApplication1.pdb
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\ClientApplication1\ClientApplication1\obj\Debug\ClientApplication1.exe
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\ClientApplication1\ClientApplication1\obj\Debug\ClientApplication1.pdb
