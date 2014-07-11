@@ -3,3 +3,9 @@ C:\Users\Ionut\Documents\Visual Studio 2012\Projects\ClientApplication1\ClientAp
 C:\Users\Ionut\Documents\Visual Studio 2012\Projects\ClientApplication1\ClientApplication1\bin\Debug\ClientApplication1.pdb
 C:\Users\Ionut\Documents\Visual Studio 2012\Projects\ClientApplication1\ClientApplication1\obj\Debug\ClientApplication1.exe
 C:\Users\Ionut\Documents\Visual Studio 2012\Projects\ClientApplication1\ClientApplication1\obj\Debug\ClientApplication1.pdb
+D:\Github\Nspyre-Last-Drop\CodeAboutClientServerTest\ClientApplication1\ClientApplication1\bin\Debug\ClientApplication1.exe.config
+D:\Github\Nspyre-Last-Drop\CodeAboutClientServerTest\ClientApplication1\ClientApplication1\obj\Debug\ClientApplication1.exe
+D:\Github\Nspyre-Last-Drop\CodeAboutClientServerTest\ClientApplication1\ClientApplication1\obj\Debug\ClientApplication1.pdb
+D:\Github\Nspyre-Last-Drop\CodeAboutClientServerTest\ClientApplication1\ClientApplication1\bin\Debug\ClientApplication1.exe
+D:\Github\Nspyre-Last-Drop\CodeAboutClientServerTest\ClientApplication1\ClientApplication1\bin\Debug\ClientApplication1.pdb
+D:\Github\Nspyre-Last-Drop\CodeAboutClientServerTest\ClientApplication1\ClientApplication1\obj\Debug\ClientApplication1.csprojResolveAssemblyReference.cache
