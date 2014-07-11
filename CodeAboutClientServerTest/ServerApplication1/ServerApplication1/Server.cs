@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * This is the working code  for the tutorial found here:
+ * http://codeabout.wordpress.com/2011/03/06/building-a-simple-server-client-application-using-c/
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
