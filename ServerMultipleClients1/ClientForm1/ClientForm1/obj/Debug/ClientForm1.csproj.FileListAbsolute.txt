@@ -1,0 +1,9 @@
+c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\bin\Debug\ClientForm1.exe.config
+c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\bin\Debug\ClientForm1.exe
+c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\bin\Debug\ClientForm1.pdb
+c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\obj\Debug\ClientForm1.csprojResolveAssemblyReference.cache
+c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\obj\Debug\ClientForm1.Form1.resources
+c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\obj\Debug\ClientForm1.Properties.Resources.resources
+c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\obj\Debug\ClientForm1.csproj.GenerateResource.Cache
+c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\obj\Debug\ClientForm1.exe
+c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\obj\Debug\ClientForm1.pdb
