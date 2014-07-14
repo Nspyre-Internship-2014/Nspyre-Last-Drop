@@ -1,0 +1,11 @@
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe.config
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.pdb
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.csprojResolveAssemblyReference.cache
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.Properties.Resources.resources
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.csproj.GenerateResource.Cache
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.exe
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.pdb
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.LoginForm.resources
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.RegisterForm.resources
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.MainForm.resources
