@@ -7,3 +7,12 @@ c:\users\ionut\documents\visual studio 2012\Projects\test1connect\test1connect\o
 c:\users\ionut\documents\visual studio 2012\Projects\test1connect\test1connect\obj\Debug\test1connect.csproj.GenerateResource.Cache
 c:\users\ionut\documents\visual studio 2012\Projects\test1connect\test1connect\obj\Debug\test1connect.exe
 c:\users\ionut\documents\visual studio 2012\Projects\test1connect\test1connect\obj\Debug\test1connect.pdb
+D:\Github\Nspyre-Last-Drop\Server\test1connect\test1connect\bin\Debug\test1connect.exe.config
+D:\Github\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.exe
+D:\Github\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.pdb
+D:\Github\Nspyre-Last-Drop\Server\test1connect\test1connect\bin\Debug\test1connect.exe
+D:\Github\Nspyre-Last-Drop\Server\test1connect\test1connect\bin\Debug\test1connect.pdb
+D:\Github\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.csprojResolveAssemblyReference.cache
+D:\Github\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.Form1.resources
+D:\Github\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.Properties.Resources.resources
+D:\Github\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.csproj.GenerateResource.Cache
