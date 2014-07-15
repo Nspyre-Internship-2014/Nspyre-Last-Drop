@@ -8,11 +8,11 @@ using System.Net.Sockets;
 
 namespace ServerSocketMultiThread
 {
-    class Program
+    class Server
     {
         static void Main(string[] args)
         {    
-            TcpListener serverSocket = new TcpListener(8888);
+            TcpListener serverSocket = new TcpListener(8021);
             TcpClient clientSocket = default(TcpClient);
             int counter = 0;
             serverSocket.Start();
@@ -65,17 +65,28 @@ namespace ServerSocketMultiThread
                     dataFromClient = System.Text.Encoding.ASCII.GetString(bytesFrom);
                     dataFromClient = dataFromClient.Substring(0, dataFromClient.IndexOf("$"));
                     Console.WriteLine(" >> " + "From client-" + clNo + dataFromClient);
+                    
+                    Plant p1 = new Plant("plant1", "1", 300);
+
                     rCount = Convert.ToString(requestCount);
-                    serverResponse = "Server to clinet(" + clNo + ") " + rCount;
-                    sendBytes = Encoding.ASCII.GetBytes(serverResponse);
+
+                    //serverResponse = "Server to clinet(" + clNo + ") " + rCount;
+                    //sendBytes = Encoding.ASCII.GetBytes(serverResponse);
+                    //networkStream.Write(sendBytes, 0, sendBytes.Length);
+
+                    sendBytes = Encoding.ASCII.GetBytes(p1.toString());
                     networkStream.Write(sendBytes, 0, sendBytes.Length);
+
                     networkStream.Flush();
                     Console.WriteLine(" >> " + serverResponse);
 
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(" >> " + ex.ToString());
+                    //Console.WriteLine(" >> " + ex.ToString());
+                    clientSocket.Close();
+                    break;
+                
                 }
 
             }

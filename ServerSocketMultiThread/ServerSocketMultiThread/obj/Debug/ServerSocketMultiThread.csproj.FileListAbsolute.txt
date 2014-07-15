@@ -4,3 +4,9 @@ c:\users\denisac\documents\visual studio 2012\Projects\ServerSocketMultiThread\S
 c:\users\denisac\documents\visual studio 2012\Projects\ServerSocketMultiThread\ServerSocketMultiThread\obj\Debug\ServerSocketMultiThread.csprojResolveAssemblyReference.cache
 c:\users\denisac\documents\visual studio 2012\Projects\ServerSocketMultiThread\ServerSocketMultiThread\obj\Debug\ServerSocketMultiThread.exe
 c:\users\denisac\documents\visual studio 2012\Projects\ServerSocketMultiThread\ServerSocketMultiThread\obj\Debug\ServerSocketMultiThread.pdb
+C:\Users\internship\Desktop\ServerSocketMultiThread\ServerSocketMultiThread\bin\Debug\ServerSocketMultiThread.exe.config
+C:\Users\internship\Desktop\ServerSocketMultiThread\ServerSocketMultiThread\obj\Debug\ServerSocketMultiThread.exe
+C:\Users\internship\Desktop\ServerSocketMultiThread\ServerSocketMultiThread\obj\Debug\ServerSocketMultiThread.pdb
+C:\Users\internship\Desktop\ServerSocketMultiThread\ServerSocketMultiThread\bin\Debug\ServerSocketMultiThread.exe
+C:\Users\internship\Desktop\ServerSocketMultiThread\ServerSocketMultiThread\bin\Debug\ServerSocketMultiThread.pdb
+C:\Users\internship\Desktop\ServerSocketMultiThread\ServerSocketMultiThread\obj\Debug\ServerSocketMultiThread.csprojResolveAssemblyReference.cache

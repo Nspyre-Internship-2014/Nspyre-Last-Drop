@@ -24,7 +24,7 @@ namespace ClientSocketMultiThread
          private void Form1_Load(object sender, EventArgs e)
         {
             msg("Client Started");
-            clientSocket.Connect("127.0.0.1", 8888);
+            clientSocket.Connect("10.33.90.52", 8021);
             label1.Text = "Client Socket Program - Server Connected ...";
         }
 
@@ -32,13 +32,14 @@ namespace ClientSocketMultiThread
         {
             NetworkStream serverStream = clientSocket.GetStream();
             byte[] outStream = System.Text.Encoding.ASCII.GetBytes("Message from Client$");
-           
-            serverStream.Write(outStream, 0, outStream.Length);
+            byte[] outStream2 = System.Text.Encoding.ASCII.GetBytes("Ionica,password$");
+            serverStream.Write(outStream2, 0, outStream2.Length);
             serverStream.Flush();
 
             byte[] inStream = new byte[1024];
             Int32 bytes=serverStream.Read(inStream, 0, inStream.Length);
             string returndata = System.Text.Encoding.ASCII.GetString(inStream,0,bytes);
+
             msg("Data from Server : " + returndata);
         }
 
