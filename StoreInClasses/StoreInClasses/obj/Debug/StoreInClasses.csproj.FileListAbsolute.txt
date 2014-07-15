@@ -1,0 +1,8 @@
+G:\Internship\StoreInClasses\StoreInClasses\bin\Debug\StoreInClasses.exe.config
+G:\Internship\StoreInClasses\StoreInClasses\obj\Debug\StoreInClasses.csprojResolveAssemblyReference.cache
+G:\Internship\StoreInClasses\StoreInClasses\obj\Debug\StoreInClasses.Properties.Resources.resources
+G:\Internship\StoreInClasses\StoreInClasses\obj\Debug\StoreInClasses.csproj.GenerateResource.Cache
+G:\Internship\StoreInClasses\StoreInClasses\bin\Debug\StoreInClasses.exe
+G:\Internship\StoreInClasses\StoreInClasses\bin\Debug\StoreInClasses.pdb
+G:\Internship\StoreInClasses\StoreInClasses\obj\Debug\StoreInClasses.exe
+G:\Internship\StoreInClasses\StoreInClasses\obj\Debug\StoreInClasses.pdb
