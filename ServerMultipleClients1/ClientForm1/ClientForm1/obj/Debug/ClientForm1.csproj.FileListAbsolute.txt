@@ -7,3 +7,12 @@ c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\obj
 c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\obj\Debug\ClientForm1.csproj.GenerateResource.Cache
 c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\obj\Debug\ClientForm1.exe
 c:\users\ionut\documents\visual studio 2012\Projects\ClientForm1\ClientForm1\obj\Debug\ClientForm1.pdb
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ClientForm1\ClientForm1\bin\Debug\ClientForm1.exe.config
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ClientForm1\ClientForm1\obj\Debug\ClientForm1.exe
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ClientForm1\ClientForm1\obj\Debug\ClientForm1.pdb
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ClientForm1\ClientForm1\bin\Debug\ClientForm1.exe
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ClientForm1\ClientForm1\bin\Debug\ClientForm1.pdb
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ClientForm1\ClientForm1\obj\Debug\ClientForm1.csprojResolveAssemblyReference.cache
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ClientForm1\ClientForm1\obj\Debug\ClientForm1.Form1.resources
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ClientForm1\ClientForm1\obj\Debug\ClientForm1.Properties.Resources.resources
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ClientForm1\ClientForm1\obj\Debug\ClientForm1.csproj.GenerateResource.Cache

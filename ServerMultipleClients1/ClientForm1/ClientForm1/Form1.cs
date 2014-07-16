@@ -46,7 +46,7 @@ namespace ClientForm1
         {
             msg("Client Started");
             int myPort = 8021;
-            clientSocket.Connect("10.33.90.52", myPort);
+            clientSocket.Connect("10.33.92.16", myPort);
             label1.Text = "Client Socket Program - Server Connected ...";
         }
 

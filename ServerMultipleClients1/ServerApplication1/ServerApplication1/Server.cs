@@ -18,7 +18,7 @@ namespace ServerApplication1
     {
 
         //The ip address 
-        private static IPAddress ipAddress = IPAddress.Parse("10.33.90.52");
+        private static IPAddress ipAddress = IPAddress.Parse("10.33.92.16");
 
         //The port
         private static Int32 myPort = 8021;

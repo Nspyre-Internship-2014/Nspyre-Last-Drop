@@ -4,3 +4,9 @@ c:\users\ionut\documents\visual studio 2012\Projects\ServerApplication1\ServerAp
 c:\users\ionut\documents\visual studio 2012\Projects\ServerApplication1\ServerApplication1\obj\Debug\ServerApplication1.exe
 c:\users\ionut\documents\visual studio 2012\Projects\ServerApplication1\ServerApplication1\obj\Debug\ServerApplication1.pdb
 C:\Users\Ionut\Documents\Visual Studio 2012\Projects\ServerApplication1\ServerApplication1\obj\Debug\ServerApplication1.csprojResolveAssemblyReference.cache
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ServerApplication1\ServerApplication1\bin\Debug\ServerApplication1.exe.config
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ServerApplication1\ServerApplication1\obj\Debug\ServerApplication1.exe
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ServerApplication1\ServerApplication1\obj\Debug\ServerApplication1.pdb
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ServerApplication1\ServerApplication1\bin\Debug\ServerApplication1.exe
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ServerApplication1\ServerApplication1\bin\Debug\ServerApplication1.pdb
+C:\Nspyre-Last-Drop\ServerMultipleClients1\ServerApplication1\ServerApplication1\obj\Debug\ServerApplication1.csprojResolveAssemblyReference.cache

@@ -16,3 +16,12 @@ C:\Users\DenisaC\Documents\GitHub\Nspyre-Last-Drop\Server\test1connect\test1conn
 C:\Users\DenisaC\Documents\GitHub\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.Form1.resources
 C:\Users\DenisaC\Documents\GitHub\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.Properties.Resources.resources
 C:\Users\DenisaC\Documents\GitHub\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.csproj.GenerateResource.Cache
+C:\Nspyre-Last-Drop\Server\test1connect\test1connect\bin\Debug\test1connect.exe.config
+C:\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.exe
+C:\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.pdb
+C:\Nspyre-Last-Drop\Server\test1connect\test1connect\bin\Debug\test1connect.exe
+C:\Nspyre-Last-Drop\Server\test1connect\test1connect\bin\Debug\test1connect.pdb
+C:\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.csprojResolveAssemblyReference.cache
+C:\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.Form1.resources
+C:\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.Properties.Resources.resources
+C:\Nspyre-Last-Drop\Server\test1connect\test1connect\obj\Debug\test1connect.csproj.GenerateResource.Cache

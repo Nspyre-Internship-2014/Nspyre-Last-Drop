@@ -6,3 +6,11 @@ G:\Internship\StoreInClasses\StoreInClasses\bin\Debug\StoreInClasses.exe
 G:\Internship\StoreInClasses\StoreInClasses\bin\Debug\StoreInClasses.pdb
 G:\Internship\StoreInClasses\StoreInClasses\obj\Debug\StoreInClasses.exe
 G:\Internship\StoreInClasses\StoreInClasses\obj\Debug\StoreInClasses.pdb
+C:\Nspyre-Last-Drop\StoreInClasses\StoreInClasses\bin\Debug\StoreInClasses.exe.config
+C:\Nspyre-Last-Drop\StoreInClasses\StoreInClasses\obj\Debug\StoreInClasses.exe
+C:\Nspyre-Last-Drop\StoreInClasses\StoreInClasses\obj\Debug\StoreInClasses.pdb
+C:\Nspyre-Last-Drop\StoreInClasses\StoreInClasses\bin\Debug\StoreInClasses.exe
+C:\Nspyre-Last-Drop\StoreInClasses\StoreInClasses\bin\Debug\StoreInClasses.pdb
+C:\Nspyre-Last-Drop\StoreInClasses\StoreInClasses\obj\Debug\StoreInClasses.csprojResolveAssemblyReference.cache
+C:\Nspyre-Last-Drop\StoreInClasses\StoreInClasses\obj\Debug\StoreInClasses.Properties.Resources.resources
+C:\Nspyre-Last-Drop\StoreInClasses\StoreInClasses\obj\Debug\StoreInClasses.csproj.GenerateResource.Cache

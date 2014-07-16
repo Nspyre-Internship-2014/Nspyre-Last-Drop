@@ -19,7 +19,7 @@ namespace test1connect
 
       private  static void readData()
         {
-            SerialPort port = new SerialPort("COM3", 9600);
+            SerialPort port = new SerialPort("COM4", 9600);
             port.Open();
             while (true)
             {

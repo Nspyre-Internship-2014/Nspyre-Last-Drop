@@ -20,7 +20,7 @@ namespace StoreInClasses
 
 
             SqlConnection con = new SqlConnection();
-            con.ConnectionString="Data Source=Alexandra-PC\\SQLEXPRESS;Initial Catalog=internship;Integrated Security=true";
+            con.ConnectionString="Data Source=ANDRADA-PC\BD;Initial Catalog=internship;Integrated Security=true";
 
             Store store=new Store();
 
