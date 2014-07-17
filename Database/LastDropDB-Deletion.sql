@@ -1,3 +1,8 @@
+alter table UserNotificationOptions
+drop constraint fk_userNotificationOptions
+
+drop table UserNotificationOptions
+
 alter table History
 drop constraint fk_plantHistory
 

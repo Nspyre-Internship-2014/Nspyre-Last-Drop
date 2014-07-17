@@ -46,3 +46,19 @@ foreign key (PlantName)
 references Plants(Name)
 on update cascade
 on delete cascade
+
+create table UserNotificationOptions( 
+	Mail varchar(50) NOT NULL, 
+	IFrom time,
+	ITo time,
+	MailToggle bit,
+	DesktopToggle bit,
+	Interval int 
+)
+
+alter table UserNotificationOptions
+add constraint fk_userNotificationOptions
+foreign key (Mail) 
+references Users(Mail)
+on update cascade
+on delete cascade
