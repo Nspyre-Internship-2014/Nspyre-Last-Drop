@@ -1,3 +1,4 @@
+use proiectNspyre
 create table Plants( 
 	Name varchar(30) NOT NULL, 
 	PlantState varchar(30), 
@@ -24,11 +25,15 @@ alter table Subscribes
 add constraint fk_subbedUsers 
 foreign key (MailSubscriber) 
 references Users(Mail)
+on update cascade
+on delete cascade
 
 alter table Subscribes
 add constraint fk_subbedPlants
 foreign key (PlantName) 
 references Plants(Name)
+on update cascade
+on delete cascade
 
 create table History(
 	PlantName varchar(30),
@@ -39,3 +44,5 @@ alter table History
 add constraint fk_plantHistory
 foreign key (PlantName) 
 references Plants(Name)
+on update cascade
+on delete cascade
