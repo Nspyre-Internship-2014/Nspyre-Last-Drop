@@ -24,3 +24,10 @@ insert into History (PlantName, WateredOn) values ('Jon','07/09/2014 14:05')
 insert into History (PlantName, WateredOn) values ('Jon','07/10/2014 18:25')
 insert into History (PlantName, WateredOn) values ('Megaluza','07/13/2014 11:30')
 insert into History (PlantName, WateredOn) values ('Alexandrina','07/09/2014 14:50')
+
+GO
+INSERT [dbo].[UserNotificationOptions] ([Mail], [IFrom], [ITo], [MailToggle], [DesktopToggle], [Interval]) VALUES (N'fluture_alexa@gmail.com', CAST(0x070010ACD1530000 AS Time), CAST(0x070050CFDF960000 AS Time), 1, 0, 3)
+INSERT [dbo].[UserNotificationOptions] ([Mail], [IFrom], [ITo], [MailToggle], [DesktopToggle], [Interval]) VALUES (N'lazea_alina@gmail.com', CAST(0x0700E03495640000 AS Time), CAST(0x07002058A3A70000 AS Time), 0, 1, 2)
+INSERT [dbo].[UserNotificationOptions] ([Mail], [IFrom], [ITo], [MailToggle], [DesktopToggle], [Interval]) VALUES (N'mari@yahoo.com', CAST(0x070040230E430000 AS Time), CAST(0x0700B0BD58750000 AS Time), 1, 1, 1)
+INSERT [dbo].[UserNotificationOptions] ([Mail], [IFrom], [ITo], [MailToggle], [DesktopToggle], [Interval]) VALUES (N'maxim_ale@yahoo.com', CAST(0x070040230E430000 AS Time), CAST(0x07002058A3A70000 AS Time), 0, 1, 5)
+INSERT [dbo].[UserNotificationOptions] ([Mail], [IFrom], [ITo], [MailToggle], [DesktopToggle], [Interval]) VALUES (N'nimeni.andreea@yahoo.com', CAST(0x070010ACD1530000 AS Time), CAST(0x07002058A3A70000 AS Time), 1, 1, 2)
