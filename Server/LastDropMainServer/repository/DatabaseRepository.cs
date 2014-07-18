@@ -32,13 +32,13 @@ namespace LastDropDBOperations
             refreshPlantList();
             refreshSubscriberList();
             refreshUserList();
+            refreshUserNotificationOptionsList();
         }
 
         public void refreshHistoryList()
         {
             historyList = store.StoreInClassHistory(con);
         }
-
         public void refreshPlantList()
         {
             plantList = store.StoreInClassPlant(con);
@@ -50,6 +50,10 @@ namespace LastDropDBOperations
         public void refreshSubscriberList()
         {
             subscriberList = store.StoreInClassSubscriber(con);
+        }
+        public void refreshUserNotificationOptionsList()
+        {
+            userNotificationOptionsList = store.storeInClassUserNotificationOptions(con);
         }
 
         private List<History> historyList;
@@ -96,6 +100,21 @@ namespace LastDropDBOperations
             }
             set { userList = value; }
         }
+
+        private List<UserNotificationOptions> userNotificationOptionsList;
+        public List<UserNotificationOptions> UserNotificationOptionsList
+        {
+            get
+            {
+                List<UserNotificationOptions> userNotOptList = new List<UserNotificationOptions>(userNotificationOptionsList);
+                return userNotOptList;
+            }
+            set
+            {
+                userNotificationOptionsList = value;
+            }
+        }
+
 
         public void deletePlant(Plant plant){
 
@@ -216,6 +235,29 @@ namespace LastDropDBOperations
             }
         }
 
+        public void deleteUserNotificationOptions(UserNotificationOptions userNotOp)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "delete from UserNotificationOptions where Mail=@mail";
+                cmd.Parameters.Add("@mail", userNotOp.Mail);
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+                this.userNotificationOptionsList.Remove(userNotOp);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+
         public void addPlant(Plant plant)
         {
 
@@ -272,6 +314,23 @@ namespace LastDropDBOperations
             cmd.ExecuteNonQuery();
             con.Close();
             subscriberList.Add(subscriber);
+        }
+
+        public void addUserNotificationOptions(UserNotificationOptions userNotOp)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "INSERT INTO UserNotificationOptions VALUES(@mail, @ifrom,@ito, @deskT, @mailT,@interval);";
+            cmd.Parameters.Add("@mail", userNotOp.Mail);
+            cmd.Parameters.Add("@ifrom", userNotOp.IFrom);
+            cmd.Parameters.Add("@ito", userNotOp.ITo);
+            cmd.Parameters.Add("@mailT", userNotOp.MailToggle);
+            cmd.Parameters.Add("@deskT", userNotOp.DesktopToggle);
+            cmd.Parameters.Add("@interval", userNotOp.Interval);
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            con.Close();
+            userNotificationOptionsList.Add(userNotOp);
         }
 
         public void updatePlant(Plant oldPlant, Plant newPlant)
@@ -356,5 +415,29 @@ namespace LastDropDBOperations
                 historyList[index] = newHistory;
             }
         }
+
+        public void updateUserNotificationOptions(UserNotificationOptions oldUserNotOp, UserNotificationOptions newUserNotOp)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "UPDATE UserNotificationOptions set Mail=@mail, IFrom=@ifrom, ITo=@ito, MailToggle=@mailT, DesktopToggle=@deskT, Interval=@interval where Mail=@oldMail";
+            cmd.Parameters.Add("@mail", newUserNotOp.Mail);
+            cmd.Parameters.Add("@ifrom", newUserNotOp.IFrom);
+            cmd.Parameters.Add("@ito", newUserNotOp.ITo);
+            cmd.Parameters.Add("@mailT", newUserNotOp.MailToggle);
+            cmd.Parameters.Add("@deskT", newUserNotOp.DesktopToggle);
+            cmd.Parameters.Add("@interval", newUserNotOp.Interval);
+            cmd.Parameters.Add("@oldMail", oldUserNotOp.Mail);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            int index = userNotificationOptionsList.IndexOf(oldUserNotOp);
+            if (index != -1)
+            {
+                userNotificationOptionsList[index] = newUserNotOp;
+            }
+        }
+
+
     }
 }

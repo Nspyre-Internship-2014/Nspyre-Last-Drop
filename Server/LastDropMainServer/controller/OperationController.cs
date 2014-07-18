@@ -23,16 +23,24 @@ namespace LastDropDBOperations
         {
             List<User> users = repository.UserList;
             List<Plant> plants = repository.PlantList;
+            List<Subscriber> subscribers = repository.SubscriberList;
             Subscriber s = null;
             bool okp = false;
             bool oku = false;
+            bool available = true;
             foreach (User u in users)
                 if (u.Mail == MailS)
                     oku = true;
             foreach (Plant p in plants)
                 if (p.Name == plantName)
                     okp = true;
-            if (okp && oku)
+            foreach (Subscriber su in subscribers)
+            {
+                if (su.PlantName == plantName)
+                    available = false;
+            }
+
+            if (okp && oku && available)
                 s = new Subscriber(MailS, plantName);
             repository.addSubscriber(s);
 
@@ -40,20 +48,11 @@ namespace LastDropDBOperations
 
         public void UnsubscribeFromPlant(string MailS, String plantName)
         {
-            List<User> users = repository.UserList;
-            List<Plant> plants = repository.PlantList;
-            Subscriber s = null;
-            bool okp = false;
-            bool oku = false;
-            foreach (User u in users)
-                if (u.Mail == MailS)
-                    oku = true;
-            foreach (Plant p in plants)
-                if (p.Name == plantName)
-                    okp = true;
-            if (okp && oku)
-                s = new Subscriber(MailS, plantName);
-            repository.deleteSubscriber(s);
+            List<Subscriber> subscribers = repository.SubscriberList;
+            foreach (Subscriber sub in subscribers)
+                if (sub.PlantName == plantName && sub.MailSubscriber == MailS)
+                    repository.deleteSubscriber(sub);
+
         }
 
         public bool registerUser(string mail, string password)

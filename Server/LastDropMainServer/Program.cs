@@ -20,25 +20,28 @@ namespace LastDropDBOperations
         static void Main()
         {
 
-              using (ServiceHost host = new ServiceHost(
-                  typeof(WCFServicesProvider),
-                  new Uri[]{
+            using (ServiceHost host = new ServiceHost(
+                typeof(WCFServicesProvider),
+                new Uri[]{
           new Uri("net.tcp://10.33.92.62:8021/Service1"),
         }))
-                {
-                    NetTcpBinding netTcp = new NetTcpBinding();
-                    netTcp.Security.Mode = SecurityMode.None;
-                    host.AddServiceEndpoint(typeof(IServicesWCF),
-                      netTcp,
-                      "Serv1");
+            {
+                NetTcpBinding netTcp = new NetTcpBinding();
+                netTcp.Security.Mode = SecurityMode.None;
+                host.AddServiceEndpoint(typeof(IServicesWCF),
+                  netTcp,
+                  "Serv1");
 
-                    host.Open();
+                host.Open();
 
-                    Console.WriteLine("Service is available. " +
-                      "Press <ENTER> to exit.");
-                    Console.ReadLine();
+                MessageBox.Show("Service is available. " +
+                  "Press <Ok> to exit.");
 
-                    host.Close();
+                host.Close();
+
+            }
+
+
 
         }
     }

@@ -113,5 +113,25 @@ namespace LastDropDBOperations
 
             return histories;
         }
+
+        public List<UserNotificationOptions> storeInClassUserNotificationOptions(SqlConnection con)
+        {
+            List<UserNotificationOptions> userNotOptList = new List<UserNotificationOptions>();
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            cmd.CommandText = "select * from UserNotificationOptions";
+            cmd.Connection = con;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                UserNotificationOptions userNotOp = new UserNotificationOptions(dr.GetValue(0).ToString(), (TimeSpan)dr.GetTimeSpan(1), (TimeSpan)dr.GetTimeSpan(2), dr.GetBoolean(3), dr.GetBoolean(4), Int32.Parse(dr.GetValue(5).ToString()));
+                userNotOptList.Add(userNotOp);
+            }
+            dr.Close();
+            con.Close();
+            return userNotOptList;
+
+        }
     }
 }
