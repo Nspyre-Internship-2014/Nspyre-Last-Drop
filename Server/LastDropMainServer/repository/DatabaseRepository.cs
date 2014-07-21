@@ -396,7 +396,7 @@ namespace LastDropDBOperations
         }
 
 
-        public void updateSubscriber(History oldHistory, History newHistory)
+        public void updateHistory(History oldHistory, History newHistory)
         {
             con.Open();
             SqlCommand cmd = new SqlCommand();
