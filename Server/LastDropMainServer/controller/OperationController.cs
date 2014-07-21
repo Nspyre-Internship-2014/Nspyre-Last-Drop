@@ -214,5 +214,18 @@ namespace LastDropMainServer
             return repository.UserList;
         }
 
+        public List<History> getHistoryByPlantName(String name)
+        {
+            List<History> histories = repository.HistoryList;
+            List<History> historyForPlant = new List<History>();
+
+            foreach (History history in histories)
+            {
+                if (history.PlantName == name)
+                    historyForPlant.Add(history);
+            }
+
+            return historyForPlant;
+        }
     }
 }
