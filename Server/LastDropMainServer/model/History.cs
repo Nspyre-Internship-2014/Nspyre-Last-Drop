@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LastDropDBOperations
+namespace LastDropMainServer
 {
-    class History
+    [Serializable]
+    public class History
     {
         private string plantName;
         private DateTime wateredOn;

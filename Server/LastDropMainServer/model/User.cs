@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LastDropDBOperations
+namespace LastDropMainServer
 {
-    class User
+    [Serializable]
+    public class User
     {
         private string mail;
         private string pass;

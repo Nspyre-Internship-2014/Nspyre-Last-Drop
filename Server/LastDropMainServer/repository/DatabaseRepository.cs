@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace LastDropDBOperations
+namespace LastDropMainServer
 {
     class DatabaseRepository
     {
@@ -74,7 +74,7 @@ namespace LastDropDBOperations
             get
             {
                 List<Plant> plantlist = new List<Plant>(plantList);
-                return plantList;
+                return plantlist;
             }
             set { plantList = value; }
         }
@@ -85,7 +85,7 @@ namespace LastDropDBOperations
             get
             {
                 List<Subscriber> subscList = new List<Subscriber>(subscriberList);
-                return subscriberList;
+                return subscList;
             }
             set { subscriberList = value; }
         }
@@ -96,7 +96,7 @@ namespace LastDropDBOperations
             get
             {
                 List<User> usList = new List<User>(userList);
-                return userList;
+                return usList;
             }
             set { userList = value; }
         }

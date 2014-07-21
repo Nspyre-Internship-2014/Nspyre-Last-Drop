@@ -1,4 +1,4 @@
-﻿namespace LastDropDBOperations.GUI
+﻿namespace LastDropMainServer
 {
     partial class MainGUI
     {
@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
+            this.serviceLaunchButton = new System.Windows.Forms.Button();
             this.statusTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // button2
+            // serviceLaunchButton
             // 
-            this.button2.Location = new System.Drawing.Point(84, 227);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Start Connection";
-            this.button2.UseVisualStyleBackColor = true;
+            this.serviceLaunchButton.Location = new System.Drawing.Point(84, 227);
+            this.serviceLaunchButton.Name = "serviceLaunchButton";
+            this.serviceLaunchButton.Size = new System.Drawing.Size(120, 23);
+            this.serviceLaunchButton.TabIndex = 1;
+            this.serviceLaunchButton.Text = "Start Connection";
+            this.serviceLaunchButton.UseVisualStyleBackColor = true;
+            this.serviceLaunchButton.Click += new System.EventHandler(this.serviceLaunchButton_Click);
             // 
             // statusTextBox
             // 
@@ -55,16 +56,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.statusTextBox);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.serviceLaunchButton);
             this.Name = "MainGUI";
             this.Text = "Last Drop Server";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainGUI_FormClosed);
+            this.Load += new System.EventHandler(this.MainGUI_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button serviceLaunchButton;
         private System.Windows.Forms.RichTextBox statusTextBox;
 
     }

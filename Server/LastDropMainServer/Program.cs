@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.ServiceModel;
-using System.Xml.Serialization;
-using System.IO;
-using System.Runtime.Serialization;
 
 
-namespace LastDropDBOperations
+namespace LastDropMainServer
 {
     static class Program
     {
@@ -20,29 +16,33 @@ namespace LastDropDBOperations
         static void Main()
         {
 
-            using (ServiceHost host = new ServiceHost(
-                typeof(WCFServicesProvider),
-                new Uri[]{
-          new Uri("net.tcp://10.33.92.62:8021/Service1"),
-        }))
-            {
-                NetTcpBinding netTcp = new NetTcpBinding();
-                netTcp.Security.Mode = SecurityMode.None;
-                host.AddServiceEndpoint(typeof(IServicesWCF),
-                  netTcp,
-                  "Serv1");
+            //Controller with all the required operations
+            OperationController controller = new OperationController();
 
-                host.Open();
-
-                MessageBox.Show("Service is available. " +
-                  "Press <Ok> to exit.");
-
-                host.Close();
-
-            }
+            //Every 10 second, the data collector updates the database
+            SensorDataCollection sensorDataCollection = new SensorDataCollection(controller, new TimeSpan(0, 10, 0));
 
 
+            //Run the main app
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainGUI(controller));
 
         }
     }
 }
+
+/*        
+          try
+          {
+              while (true)
+              {
+                  SensorDataCollection sensorDataCollection = new SensorDataCollection(controller, new TimeSpan(0, 10, 0));
+                  break;
+              }
+          }
+          catch (Exception e)
+          {
+              MessageBox.Show("The arduino board is not connected to this computer. Please reconnect it and resume the program.");
+          }
+           */
