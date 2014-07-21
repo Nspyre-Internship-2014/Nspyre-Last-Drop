@@ -1,0 +1,6 @@
+c:\users\ionut\documents\visual studio 2012\Projects\wcfClient1\wcfClient1\bin\Debug\wcfClient1.exe.config
+c:\users\ionut\documents\visual studio 2012\Projects\wcfClient1\wcfClient1\bin\Debug\wcfClient1.exe
+c:\users\ionut\documents\visual studio 2012\Projects\wcfClient1\wcfClient1\bin\Debug\wcfClient1.pdb
+c:\users\ionut\documents\visual studio 2012\Projects\wcfClient1\wcfClient1\obj\Debug\wcfClient1.csprojResolveAssemblyReference.cache
+c:\users\ionut\documents\visual studio 2012\Projects\wcfClient1\wcfClient1\obj\Debug\wcfClient1.exe
+c:\users\ionut\documents\visual studio 2012\Projects\wcfClient1\wcfClient1\obj\Debug\wcfClient1.pdb
