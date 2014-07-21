@@ -7,9 +7,9 @@ using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Net;
 
-namespace LastDropDBOperations
+namespace LastDropMainServer
 {
-    class OperationController
+    public class OperationController
     {
 
         DatabaseRepository repository;
@@ -86,7 +86,7 @@ namespace LastDropDBOperations
                 sendMail(subscriber.MailSubscriber);
         }
 
-        public void sendMail(String mail)
+        private void sendMail(String mail)
         {
             string smtpAddress = "smtp.mail.yahoo.com";
             int portNumber = 587;
@@ -121,11 +121,98 @@ namespace LastDropDBOperations
                 if (pl.Name == nameplant)
                     if (pl.Status == "0")
                         return false;
-
-
             }
             return true;
+        }
+
+        public Boolean setNotificationIntervals(string username, TimeSpan iFrom, TimeSpan iTo, int interval)
+        {
+            UserNotificationOptions userOptions = getUserNotificationOptions(username);
+            UserNotificationOptions oldUserOptions = getUserNotificationOptions(username);
+
+            userOptions.IFrom = iFrom;
+            userOptions.ITo = iTo;
+            userOptions.Interval = interval;
+
+            repository.updateUserNotificationOptions(oldUserOptions, userOptions);
+
+            return true;
+        }
+
+        public void toggleMailNotifications(string username, Boolean enabled)
+        {
+            UserNotificationOptions userOptions = getUserNotificationOptions(username);
+            UserNotificationOptions oldUserOptions = getUserNotificationOptions(username);
+
+            userOptions.MailToggle = enabled;
+
+            repository.updateUserNotificationOptions(oldUserOptions, userOptions);
 
         }
+
+        public void toggleDesktopNotifications(string username, Boolean enabled)
+        {
+            UserNotificationOptions userOptions = getUserNotificationOptions(username);
+            UserNotificationOptions oldUserOptions = getUserNotificationOptions(username);
+
+            userOptions.DesktopToggle = enabled;
+
+            repository.updateUserNotificationOptions(oldUserOptions, userOptions);
+        }
+
+        private User getUserByName(string username)
+        {
+            foreach (User u in this.repository.UserList)
+                if (u.Mail == username)
+                    return u;
+            return null;
+        }
+
+        public UserNotificationOptions getUserNotificationOptions(string username)
+        {
+            User user = getUserByName(username);
+
+            foreach (UserNotificationOptions opt in repository.UserNotificationOptionsList)
+                if (opt.Mail == user.Mail)
+                    return opt;
+            return null;
+        }
+
+        public List<Plant> getAvailablePlants(string name, string password)
+        {
+            List<Plant> availablePlants = new List<Plant>();
+            User us1 = getUserByName(name);
+            if (us1.Pass == password)
+            {
+
+                foreach (Plant pl in repository.PlantList)
+                {
+                    bool checkPlant = true;
+                    foreach (Subscriber sub in repository.SubscriberList)
+                    {
+                        if (pl.Name == sub.PlantName && sub.MailSubscriber == name)
+                        {
+                            availablePlants.Add(pl);
+                            checkPlant = false;
+                            break;
+                        }
+                        if (pl.Name == sub.PlantName)
+                        {
+                            checkPlant = false;
+                            break;
+                        }
+                    }
+                    if (checkPlant)
+                        availablePlants.Add(pl);
+                }
+            }
+            return availablePlants;
+        }
+
+        public List<User> getUserList()
+        {
+            return repository.UserList;
+        }
+
     }
 }

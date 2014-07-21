@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LastDropDBOperations
+namespace LastDropMainServer
 {
-    class Plant
+    [Serializable]
+    public class Plant
     {
         private string name;
         private string status;

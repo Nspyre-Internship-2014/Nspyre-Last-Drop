@@ -13,8 +13,8 @@ D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\bin\Debug\LastDropDBO
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropDBOperations.exe
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropDBOperations.pdb
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropMainServer.csprojResolveAssemblyReference.cache
-D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropDBOperations.Properties.Resources.resources
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropMainServer.csproj.GenerateResource.Cache
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\bin\Debug\LastDropDBOperations.exe
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\bin\Debug\LastDropDBOperations.pdb
-D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropDBOperations.GUI.MainGUI.resources
+D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropMainServer.MainGUI.resources
+D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropMainServer.Properties.Resources.resources
