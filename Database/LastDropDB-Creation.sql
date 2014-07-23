@@ -1,10 +1,10 @@
-use proiectNspyre
+use LastDropDB
 create table Plants( 
 	Name varchar(30) NOT NULL, 
 	PlantState varchar(30), 
-	WaterAmount int
-	CoolDown int
-	DryValue int
+	WaterAmount int,
+	CoolDown int,
+	DryValue int,
 	HumidValue int
 	
 )
