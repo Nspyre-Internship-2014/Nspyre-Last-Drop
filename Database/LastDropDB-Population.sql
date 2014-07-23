@@ -1,8 +1,8 @@
-insert into Plants (Name, PlantState, WaterAmount) values ('Marinela',0,100)
-insert into Plants (Name, PlantState, WaterAmount) values ('Jon',1,1000)
-insert into Plants (Name, PlantState, WaterAmount) values ('Marcel',1,500)
-insert into Plants (Name, PlantState, WaterAmount) values ('Megaluza',0,450)
-insert into Plants (Name, PlantState, WaterAmount) values ('Alexandrina',1,700)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Marinela',0,100,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Jon',1,1000,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Marcel',1,500,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Megaluza',0,450,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Alexandrina',1,700,48,700,300)
 
 insert into Users (Mail, Pass) values ('mari@yahoo.com','maricica')
 insert into Users (Mail, Pass) values ('lazea_alina@gmail.com','alynutza')
