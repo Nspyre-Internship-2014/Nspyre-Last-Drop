@@ -134,7 +134,7 @@
             this.notificationOptionsToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(183, 70);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(183, 92);
             // 
             // testToolStripMenuItem
             // 
@@ -155,6 +155,7 @@
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.logOutToolStripMenuItem.Text = "LogOut";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // LoginForm
             // 
@@ -171,6 +172,7 @@
             this.Controls.Add(this.label1);
             this.Name = "LoginForm";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

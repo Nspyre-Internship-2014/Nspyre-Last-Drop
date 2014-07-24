@@ -26,7 +26,7 @@ namespace TrayApplicationTest
             
             netTcp.Security.Mode = SecurityMode.None;
             netTcpFactory = new DuplexChannelFactory<IServicesWCF>(serviceCallback, netTcp, new EndpointAddress(
-                  "net.tcp://10.33.92.62:8021/Service1/LastDropService"));
+                  "net.tcp://10.33.92.30:8021/Service1/LastDropService"));
 
             serviceProvider = netTcpFactory.CreateChannel();   
         }     
@@ -42,7 +42,6 @@ namespace TrayApplicationTest
             
             string str = serviceProvider.logIn(textBox1.Text, textBox2.Text);
              
-           
             var serializer = new XmlSerializer(typeof(UserNotificationOptions));
             UserNotificationOptions userNot;
             if (str != "fail")
@@ -92,8 +91,20 @@ namespace TrayApplicationTest
             this.notifyIcon2.BalloonTipText = "Notification options has been clicked.";
             this.notifyIcon2.ShowBalloonTip(1000);
             netTcpFactory.Close();
-            NotificationOptions notifOptionForm = new NotificationOptions();
+            NotificationOptions notifOptionForm = new NotificationOptions(textBox1.Text,textBox2.Text);
             notifOptionForm.Visible = true;
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MainForm mainForm = new MainForm();
+            mainForm.Visible = true;
         }
 
 

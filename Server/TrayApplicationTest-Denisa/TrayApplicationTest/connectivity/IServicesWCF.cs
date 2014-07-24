@@ -39,5 +39,11 @@ namespace TrayApplicationTest
         //returns a serialized plant list as string
         [OperationContract]
          string getAvailablePlants(string username , string password);
+
+        [OperationContract]
+        string getDryPlants(string username, string password);
+
+        [OperationContract]
+        string getSubscribedPlants(string username, string password);
     }
 }

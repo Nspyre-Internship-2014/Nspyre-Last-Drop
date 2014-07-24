@@ -26,48 +26,48 @@ namespace TrayApplicationTest.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool checkBox {
+        public bool allDayNot {
             get {
-                return ((bool)(this["checkBox"]));
+                return ((bool)(this["allDayNot"]));
             }
             set {
-                this["checkBox"] = value;
+                this["allDayNot"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public string comboBox1 {
+        public string fromT {
             get {
-                return ((string)(this["comboBox1"]));
+                return ((string)(this["fromT"]));
             }
             set {
-                this["comboBox1"] = value;
+                this["fromT"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public string comboBox2 {
+        public string toT {
             get {
-                return ((string)(this["comboBox2"]));
+                return ((string)(this["toT"]));
             }
             set {
-                this["comboBox2"] = value;
+                this["toT"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string comboBox3 {
+        public string intervalT {
             get {
-                return ((string)(this["comboBox3"]));
+                return ((string)(this["intervalT"]));
             }
             set {
-                this["comboBox3"] = value;
+                this["intervalT"] = value;
             }
         }
         

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TrayApplicationTest
 {
     [Serializable]
-    class Plant
+    public class Plant
     {
         private string name;
         private string status;

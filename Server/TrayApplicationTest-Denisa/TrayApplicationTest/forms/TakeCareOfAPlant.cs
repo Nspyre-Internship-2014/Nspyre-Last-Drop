@@ -27,11 +27,10 @@ namespace TrayApplicationTest
 
             netTcp.Security.Mode = SecurityMode.None;
             netTcpFactory = new DuplexChannelFactory<IServicesWCF>(serviceCallback, netTcp, new EndpointAddress(
-                  "net.tcp://10.33.92.62:8021/Service1/LastDropService"));
+                  "net.tcp://10.33.92.30:8021/Service1/LastDropService"));
 
             serviceProvider = netTcpFactory.CreateChannel();
         }     
-       
 
         public TakeCareOfAPlant(string mail, string password)
         {
@@ -43,12 +42,70 @@ namespace TrayApplicationTest
 
         private void TakeCareOfAPlant_Load(object sender, EventArgs e)
         {
-            Console.WriteLine(mail);
-            Console.WriteLine(password);
+            getAvailablePlants();
+            getSubscribedPlants();
+        }
 
-            string list = serviceProvider.getAvailablePlants(mail,password);
+        private void TakeCareOfAPlant_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            netTcpFactory.Close();
+        }
 
-            Console.WriteLine(list);
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                if (checkedListBox1.GetItemChecked(i)==true)
+                {
+                    string plantName = checkedListBox1.Items[i].ToString();
+                     
+                    serviceProvider.unsubscribeToPlant(mail, plantName);
+                }          
+            }
+            getSubscribedPlants();
+            getAvailablePlants();
+        }
+       
+        private void button2_Click(object sender, EventArgs e)
+        {
+             
+            for (int i = 0; i < checkedListBox2.Items.Count; i++)
+            {
+                if (checkedListBox2.GetItemChecked(i) == true)
+                {
+                    string plantName = checkedListBox2.Items[i].ToString();
+                    
+                    serviceProvider.subscribeToPlant(mail, plantName);
+                }
+            }
+            getAvailablePlants();
+            getSubscribedPlants();
+        }
+
+        public void getSubscribedPlants() 
+        {
+            checkedListBox1.Items.Clear();
+            string subscribed = serviceProvider.getSubscribedPlants(mail, password);
+            Console.WriteLine(subscribed);
+            var serializer2 = new XmlSerializer(typeof(List<Plant>));
+            List<Plant> subscribedPlantList;
+            using (TextReader reader = new StringReader(subscribed))
+            {
+                subscribedPlantList = (List<Plant>)serializer2.Deserialize(reader);
+            }
+            foreach (Plant plant in subscribedPlantList)
+            {
+
+                checkedListBox1.Items.Add(plant.Name);
+            }
+        }
+
+        public void getAvailablePlants() 
+        {
+            checkedListBox2.Items.Clear();
+            string list = serviceProvider.getAvailablePlants(mail, password);
+
             var serializer = new XmlSerializer(typeof(List<Plant>));
             List<Plant> plantList;
             using (TextReader reader = new StringReader(list))
@@ -57,27 +114,8 @@ namespace TrayApplicationTest
             }
             foreach (Plant plant in plantList)
             {
-                Console.WriteLine(plant.ToString());
-                checkedListBox1.Items.Add(plant.Name);
-               
+                checkedListBox2.Items.Add(plant.Name);
             }
-        }
-
-
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TakeCareOfAPlant_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            netTcpFactory.Close();
-        }
-
-        private void checkedListBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-           
         }
 
 

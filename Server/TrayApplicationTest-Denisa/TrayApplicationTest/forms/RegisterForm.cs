@@ -25,7 +25,7 @@ namespace TrayApplicationTest
 
             netTcp.Security.Mode = SecurityMode.None;
             netTcpFactory = new DuplexChannelFactory<IServicesWCF>(serviceCallback, netTcp, new EndpointAddress(
-                  "net.tcp://10.33.92.62:8021/Service1/LastDropService"));
+                  "net.tcp://10.33.92.30:8021/Service1/LastDropService"));
 
             serviceProvider = netTcpFactory.CreateChannel();
         }     

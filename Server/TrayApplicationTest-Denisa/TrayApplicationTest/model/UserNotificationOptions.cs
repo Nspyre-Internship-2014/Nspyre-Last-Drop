@@ -52,8 +52,10 @@ namespace TrayApplicationTest
         [XmlElement("IFrom")]
         public long IFromTicks
         {
-            get { return iFrom.Ticks; }
-            set { iFrom = new TimeSpan(value); }
+            get { return IFrom.Ticks; }
+            set {
+                iFrom = new TimeSpan(value);
+                IFrom = new TimeSpan(value); }
         }
 
         [XmlIgnore]
@@ -67,8 +69,10 @@ namespace TrayApplicationTest
         [XmlElement("ITo")]
         public long IToTicks
         {
-            get { return iTo.Ticks; }
-            set { iTo = new TimeSpan(value); }
+            get { return ITo.Ticks; }
+            set {
+                iTo = new TimeSpan(value);
+                ITo = new TimeSpan(value); }
         }
 
         public Boolean MailToggle
@@ -89,7 +93,7 @@ namespace TrayApplicationTest
 
         public override string ToString()
         {
-            return this.Mail + " " + this.IFrom + " " + this.ITo + " " + this.MailToggle + " " + this.DesktopToggle + " " + this.Interval;
+            return this.Mail + " " + this.iFrom + " " + this.iTo + " " + this.MailToggle + " " + this.DesktopToggle + " " + this.Interval;
         }
 
         public bool Equals(UserNotificationOptions opt)

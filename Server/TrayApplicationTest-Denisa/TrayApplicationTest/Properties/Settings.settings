@@ -2,16 +2,16 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TrayApplicationTest.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="checkBox" Type="System.Boolean" Scope="User">
+    <Setting Name="allDayNot" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="comboBox1" Type="System.String" Scope="User">
+    <Setting Name="fromT" Type="System.String" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="comboBox2" Type="System.String" Scope="User">
+    <Setting Name="toT" Type="System.String" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="comboBox3" Type="System.String" Scope="User">
+    <Setting Name="intervalT" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="mailNotification" Type="System.Boolean" Scope="User">
