@@ -1,0 +1,72 @@
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe.config
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.pdb
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.csprojResolveAssemblyReference.cache
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.Properties.Resources.resources
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.csproj.GenerateResource.Cache
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.exe
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.pdb
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.LoginForm.resources
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.RegisterForm.resources
+D:\Github\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.MainForm.resources
+C:\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe.config
+C:\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.exe
+C:\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.pdb
+C:\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe
+C:\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.pdb
+C:\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.csprojResolveAssemblyReference.cache
+C:\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.LoginForm.resources
+C:\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.RegisterForm.resources
+C:\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.MainForm.resources
+C:\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.Properties.Resources.resources
+C:\Nspyre-Last-Drop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.csproj.GenerateResource.Cache
+C:\Users\andrada\Documents\Visual Studio 2012\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe.config
+C:\Users\andrada\Documents\Visual Studio 2012\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.exe
+C:\Users\andrada\Documents\Visual Studio 2012\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.pdb
+C:\Users\andrada\Documents\Visual Studio 2012\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe
+C:\Users\andrada\Documents\Visual Studio 2012\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.pdb
+C:\Users\andrada\Documents\Visual Studio 2012\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.csprojResolveAssemblyReference.cache
+C:\Users\andrada\Documents\Visual Studio 2012\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.LoginForm.resources
+C:\Users\andrada\Documents\Visual Studio 2012\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.RegisterForm.resources
+C:\Users\andrada\Documents\Visual Studio 2012\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.MainForm.resources
+C:\Users\andrada\Documents\Visual Studio 2012\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.Properties.Resources.resources
+C:\Users\andrada\Documents\Visual Studio 2012\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.csproj.GenerateResource.Cache
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe.config
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.exe
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.pdb
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\bin\Debug\TrayApplicationTest.pdb
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.csprojResolveAssemblyReference.cache
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.LoginForm.resources
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.RegisterForm.resources
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.MainForm.resources
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.Properties.Resources.resources
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.csproj.GenerateResource.Cache
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.NotificationOptions.resources
+C:\Users\internship\Desktop\TrayApplicationTest\TrayApplicationTest\obj\Debug\TrayApplicationTest.TakeCareOfAPlant.resources
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe.config
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.exe
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.pdb
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\bin\Debug\TrayApplicationTest.pdb
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.csprojResolveAssemblyReference.cache
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.LoginForm.resources
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.NotificationOptions.resources
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.RegisterForm.resources
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.MainForm.resources
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.Properties.Resources.resources
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.TakeCareOfAPlant.resources
+C:\Users\internship\Desktop\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.csproj.GenerateResource.Cache
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe.config
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.exe
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.pdb
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\bin\Debug\TrayApplicationTest.exe
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\bin\Debug\TrayApplicationTest.pdb
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.csprojResolveAssemblyReference.cache
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.LoginForm.resources
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.NotificationOptions.resources
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.RegisterForm.resources
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.MainForm.resources
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.Properties.Resources.resources
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.TakeCareOfAPlant.resources
+C:\Users\Ionut\Documents\Visual Studio 2012\Projects\TrayApplicationTest-Denisa\TrayApplicationTest\obj\Debug\TrayApplicationTest.csproj.GenerateResource.Cache
