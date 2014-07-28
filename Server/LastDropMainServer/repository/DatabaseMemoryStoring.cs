@@ -25,8 +25,13 @@ namespace LastDropMainServer
 
             while (dr.Read())
             {
-                Plant plant = new Plant(dr.GetValue(0).ToString(), dr.GetValue(1).ToString(), Int32.Parse(dr.GetValue(2).ToString()));
-                plants.Add(plant);
+                Plant plant = new Plant(dr.GetValue(0).ToString(), 
+                    dr.GetValue(1).ToString(), 
+                    Int32.Parse(dr.GetValue(2).ToString()),
+                     new TimeSpan(Int32.Parse(dr.GetValue(3).ToString()),0,0), 
+                     Int32.Parse(dr.GetValue(4).ToString()), 
+                     Int32.Parse(dr.GetValue(5).ToString()));
+                    plants.Add(plant);
             }
 
             dr.Close();
@@ -125,7 +130,7 @@ namespace LastDropMainServer
             dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                UserNotificationOptions userNotOp = new UserNotificationOptions(dr.GetValue(0).ToString(), (TimeSpan)dr.GetTimeSpan(1), (TimeSpan)dr.GetTimeSpan(2), dr.GetBoolean(3), dr.GetBoolean(4), Int32.Parse(dr.GetValue(5).ToString()));
+                UserNotificationOptions userNotOp = new UserNotificationOptions(dr.GetValue(0).ToString(), dr.GetTimeSpan(1), dr.GetTimeSpan(2), dr.GetBoolean(3), dr.GetBoolean(4), Int32.Parse(dr.GetValue(5).ToString()));
                 userNotOptList.Add(userNotOp);
             }
             dr.Close();

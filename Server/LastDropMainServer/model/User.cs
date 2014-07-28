@@ -9,6 +9,7 @@ namespace LastDropMainServer
     [Serializable]
     public class User
     {
+        #pragma warning disable 0169
         private string mail;
         private string pass;
 
@@ -21,7 +22,7 @@ namespace LastDropMainServer
             this.Pass = Pass;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return this.Mail + " " + this.Pass;
         }

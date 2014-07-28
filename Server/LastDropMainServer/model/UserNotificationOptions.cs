@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace LastDropMainServer
 {
     [Serializable]
     public class UserNotificationOptions
     {
+#pragma warning disable 0169
         private string mail;
         private TimeSpan iFrom;
         private TimeSpan iTo;
@@ -16,13 +18,13 @@ namespace LastDropMainServer
         private Boolean desktopToggle;
         private int interval;
 
-        private UserNotificationOptions () {}
+        private UserNotificationOptions() { }
 
         public UserNotificationOptions(string Mail, TimeSpan IFrom, TimeSpan ITo, Boolean MailToggle, Boolean DesktopToggle, int Interval)
         {
             this.Mail = Mail;
-            this.IFrom = IFrom;
-            this.ITo = ITo;
+            this.iFrom = IFrom;
+            this.iTo = ITo;
             this.MailToggle = MailToggle;
             this.DesktopToggle = DesktopToggle;
             this.Interval = Interval;
@@ -33,16 +35,42 @@ namespace LastDropMainServer
             get;
             set;
         }
+
+        [XmlIgnore]
         public TimeSpan IFrom
         {
-            get;
-            set;
+            get { return this.iFrom; }
+            set { this.iFrom = value; }
         }
+
+        [XmlElement("IFrom")]
+        public long IFromTicks
+        {
+            get { return iFrom.Ticks; }
+            set
+            {
+                iFrom = new TimeSpan(value);
+            }
+        }
+
+        [XmlIgnore]
         public TimeSpan ITo
         {
-            get;
-            set;
+            get { return this.iTo; }
+            set { this.iTo = value; }
         }
+
+
+        [XmlElement("ITo")]
+        public long IToTicks
+        {
+            get { return iTo.Ticks; }
+            set
+            {
+                iTo = new TimeSpan(value);
+            }
+        }
+
         public Boolean MailToggle
         {
             get;
@@ -59,9 +87,9 @@ namespace LastDropMainServer
             set;
         }
 
-        public String ToString()
+        public override string ToString()
         {
-            return this.Mail + " " + this.IFrom + " " + this.ITo + " " + this.MailToggle + " " + this.DesktopToggle + " " + this.Interval;
+            return this.Mail + " " + this.iFrom + " " + this.iTo + " " + this.MailToggle + " " + this.DesktopToggle + " " + this.Interval;
         }
 
         public bool Equals(UserNotificationOptions opt)

@@ -116,7 +116,8 @@ namespace LastDropMainServer
         }
 
 
-        public void deletePlant(Plant plant){
+        public void deletePlant(Plant plant)
+        {
 
             try
             {
@@ -127,7 +128,7 @@ namespace LastDropMainServer
                 SqlCommand cmd = new SqlCommand();
 
                 cmd.CommandText = "delete from Plants where Name=@Name";
-                cmd.Parameters.Add("@Name", plant.Name);
+                cmd.Parameters.AddWithValue("@Name", plant.Name);
                 cmd.Connection = con;
 
                 cmd.ExecuteNonQuery();
@@ -136,7 +137,7 @@ namespace LastDropMainServer
                 foreach (Plant p in this.plantList)
                     if (p.Equals(plant))
                         this.plantList.Remove(p);
-                
+
             }
             catch (Exception)
             {
@@ -146,7 +147,7 @@ namespace LastDropMainServer
             {
                 con.Close();
             }
-                
+
         }
 
         public void deleteHistory(History history)
@@ -159,8 +160,8 @@ namespace LastDropMainServer
                 SqlCommand cmd = new SqlCommand();
 
                 cmd.CommandText = "delete from History where PlantName=@PlantName AND WateredOn=@WateredOn";
-                cmd.Parameters.Add("@PlantName", history.PlantName);
-                cmd.Parameters.Add("@WateredOn",history.WateredOn);
+                cmd.Parameters.AddWithValue("@PlantName", history.PlantName);
+                cmd.Parameters.AddWithValue("@WateredOn", history.WateredOn);
                 cmd.Connection = con;
 
                 cmd.ExecuteNonQuery();
@@ -188,8 +189,8 @@ namespace LastDropMainServer
                 SqlCommand cmd = new SqlCommand();
 
                 cmd.CommandText = "delete from Subscribes where PlantName=@PlantName AND MailSubscriber=@MailSubscriber";
-                cmd.Parameters.Add("@PlantName", subscriber.PlantName);
-                cmd.Parameters.Add("@MailSubscriber", subscriber.MailSubscriber);
+                cmd.Parameters.AddWithValue("@PlantName", subscriber.PlantName);
+                cmd.Parameters.AddWithValue("@MailSubscriber", subscriber.MailSubscriber);
                 cmd.Connection = con;
 
                 cmd.ExecuteNonQuery();
@@ -217,7 +218,7 @@ namespace LastDropMainServer
                 SqlCommand cmd = new SqlCommand();
 
                 cmd.CommandText = "delete from Users where Mail=@Mail";
-                cmd.Parameters.Add("@Mail", user.Mail);
+                cmd.Parameters.AddWithValue("@Mail", user.Mail);
                 cmd.Connection = con;
 
                 cmd.ExecuteNonQuery();
@@ -242,7 +243,7 @@ namespace LastDropMainServer
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "delete from UserNotificationOptions where Mail=@mail";
-                cmd.Parameters.Add("@mail", userNotOp.Mail);
+                cmd.Parameters.AddWithValue("@mail", userNotOp.Mail);
                 cmd.Connection = con;
                 cmd.ExecuteNonQuery();
                 this.userNotificationOptionsList.Remove(userNotOp);
@@ -263,10 +264,13 @@ namespace LastDropMainServer
 
             con.Open();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = " INSERT INTO Plants VALUES (@name , @plantstate , @amount);";
-            cmd.Parameters.Add("@name", plant.Name);
-            cmd.Parameters.Add("@plantstate", plant.Status);
-            cmd.Parameters.Add("@amount", plant.WaterAmount);
+            cmd.CommandText = " INSERT INTO Plants VALUES (@name , @plantstate , @amount, @coolDown, @dryValue, @humidValue)x";
+            cmd.Parameters.AddWithValue("@name", plant.Name);
+            cmd.Parameters.AddWithValue("@plantstate", plant.Status);
+            cmd.Parameters.AddWithValue("@amount", plant.WaterAmount);
+            cmd.Parameters.AddWithValue("@coolDown", plant.CoolDown.TotalHours);
+            cmd.Parameters.AddWithValue("@dryValue", plant.DryValue);
+            cmd.Parameters.AddWithValue("@humidValue", plant.HumidValue);
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             con.Close();
@@ -280,8 +284,8 @@ namespace LastDropMainServer
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = " INSERT INTO Users VALUES (@mail , @pass);";
-            cmd.Parameters.Add("@mail", user.Mail);
-            cmd.Parameters.Add("@pass", user.Pass);
+            cmd.Parameters.AddWithValue("@mail", user.Mail);
+            cmd.Parameters.AddWithValue("@pass", user.Pass);
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             con.Close();
@@ -294,8 +298,8 @@ namespace LastDropMainServer
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = " INSERT INTO History VALUES (@plantname , @wateredon);";
-            cmd.Parameters.Add("@plantname", history.PlantName);
-            cmd.Parameters.Add("@watteredon", history.WateredOn);
+            cmd.Parameters.AddWithValue("@plantname", history.PlantName);
+            cmd.Parameters.AddWithValue("@watteredon", history.WateredOn);
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             con.Close();
@@ -308,8 +312,8 @@ namespace LastDropMainServer
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = " INSERT INTO Subscribes VALUES (@mail , @plantname);";
-            cmd.Parameters.Add("@mail", subscriber.MailSubscriber);
-            cmd.Parameters.Add("@plantname", subscriber.PlantName);
+            cmd.Parameters.AddWithValue("@mail", subscriber.MailSubscriber);
+            cmd.Parameters.AddWithValue("@plantname", subscriber.PlantName);
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             con.Close();
@@ -321,12 +325,12 @@ namespace LastDropMainServer
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "INSERT INTO UserNotificationOptions VALUES(@mail, @ifrom,@ito, @deskT, @mailT,@interval);";
-            cmd.Parameters.Add("@mail", userNotOp.Mail);
-            cmd.Parameters.Add("@ifrom", userNotOp.IFrom);
-            cmd.Parameters.Add("@ito", userNotOp.ITo);
-            cmd.Parameters.Add("@mailT", userNotOp.MailToggle);
-            cmd.Parameters.Add("@deskT", userNotOp.DesktopToggle);
-            cmd.Parameters.Add("@interval", userNotOp.Interval);
+            cmd.Parameters.AddWithValue("@mail", userNotOp.Mail);
+            cmd.Parameters.AddWithValue("@ifrom", userNotOp.IFrom);
+            cmd.Parameters.AddWithValue("@ito", userNotOp.ITo);
+            cmd.Parameters.AddWithValue("@mailT", userNotOp.MailToggle);
+            cmd.Parameters.AddWithValue("@deskT", userNotOp.DesktopToggle);
+            cmd.Parameters.AddWithValue("@interval", userNotOp.Interval);
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             con.Close();
@@ -338,12 +342,15 @@ namespace LastDropMainServer
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "UPDATE Plants set Name=@plantName, PlantState=@status, WaterAmount=@waterAmount where Name=@oldPlantName";
+            cmd.CommandText = "UPDATE Plants set Name=@plantName, PlantState=@status, WaterAmount=@waterAmount, CoolDown=@coolDown, DryValue=@dryValue, HumidValue=@humidValue where Name=@oldPlantName";
             cmd.Parameters.Clear();
-            cmd.Parameters.Add("@oldPlantName", oldPlant.Name);
-            cmd.Parameters.Add("@plantName", newPlant.Name);
-            cmd.Parameters.Add("@status", newPlant.Status);
-            cmd.Parameters.Add("@waterAmount", newPlant.WaterAmount);
+            cmd.Parameters.AddWithValue("@oldPlantName", oldPlant.Name);
+            cmd.Parameters.AddWithValue("@plantName", newPlant.Name);
+            cmd.Parameters.AddWithValue("@status", newPlant.Status);
+            cmd.Parameters.AddWithValue("@waterAmount", newPlant.WaterAmount);
+            cmd.Parameters.AddWithValue("@coolDown", newPlant.CoolDown.TotalHours);
+            cmd.Parameters.AddWithValue("@dryValue", newPlant.DryValue);
+            cmd.Parameters.AddWithValue("@humidValue", newPlant.HumidValue);
             cmd.ExecuteNonQuery();
             con.Close();
 
@@ -362,9 +369,9 @@ namespace LastDropMainServer
             cmd.Connection = con;
             cmd.CommandText = "UPDATE Users set Mail=@mail, Pass=@pass where Mail=@oldUserMail";
             cmd.Parameters.Clear();
-            cmd.Parameters.Add("@oldUserMail", oldUser.Mail);
-            cmd.Parameters.Add("@mail", newUser.Mail);
-            cmd.Parameters.Add("@pass", newUser.Pass);
+            cmd.Parameters.AddWithValue("@oldUserMail", oldUser.Mail);
+            cmd.Parameters.AddWithValue("@mail", newUser.Mail);
+            cmd.Parameters.AddWithValue("@pass", newUser.Pass);
             cmd.ExecuteNonQuery();
             con.Close();
 
@@ -382,9 +389,9 @@ namespace LastDropMainServer
             cmd.Connection = con;
             cmd.CommandText = "UPDATE Subscribes set MailSubscriber=@mail, PlantName=@name where MailSubscriber=@oldSubscriberMail";
             cmd.Parameters.Clear();
-            cmd.Parameters.Add("@oldSubscriberMail", oldSubscriber.MailSubscriber);
-            cmd.Parameters.Add("@mail", newSubscriber.MailSubscriber);
-            cmd.Parameters.Add("@name", newSubscriber.PlantName);
+            cmd.Parameters.AddWithValue("@oldSubscriberMail", oldSubscriber.MailSubscriber);
+            cmd.Parameters.AddWithValue("@mail", newSubscriber.MailSubscriber);
+            cmd.Parameters.AddWithValue("@name", newSubscriber.PlantName);
             cmd.ExecuteNonQuery();
             con.Close();
 
@@ -403,9 +410,9 @@ namespace LastDropMainServer
             cmd.Connection = con;
             cmd.CommandText = "UPDATE History set PlantName=@name, WateredOn=@wateredon where PlantName=@oldPlantName";
             cmd.Parameters.Clear();
-            cmd.Parameters.Add("@oldPlantName", oldHistory.PlantName);
-            cmd.Parameters.Add("@name", newHistory.PlantName);
-            cmd.Parameters.Add("@wateredon", newHistory.WateredOn);
+            cmd.Parameters.AddWithValue("@oldPlantName", oldHistory.PlantName);
+            cmd.Parameters.AddWithValue("@name", newHistory.PlantName);
+            cmd.Parameters.AddWithValue("@wateredon", newHistory.WateredOn);
             cmd.ExecuteNonQuery();
             con.Close();
 
@@ -422,13 +429,13 @@ namespace LastDropMainServer
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             cmd.CommandText = "UPDATE UserNotificationOptions set Mail=@mail, IFrom=@ifrom, ITo=@ito, MailToggle=@mailT, DesktopToggle=@deskT, Interval=@interval where Mail=@oldMail";
-            cmd.Parameters.Add("@mail", newUserNotOp.Mail);
-            cmd.Parameters.Add("@ifrom", newUserNotOp.IFrom);
-            cmd.Parameters.Add("@ito", newUserNotOp.ITo);
-            cmd.Parameters.Add("@mailT", newUserNotOp.MailToggle);
-            cmd.Parameters.Add("@deskT", newUserNotOp.DesktopToggle);
-            cmd.Parameters.Add("@interval", newUserNotOp.Interval);
-            cmd.Parameters.Add("@oldMail", oldUserNotOp.Mail);
+            cmd.Parameters.AddWithValue("@mail", newUserNotOp.Mail);
+            cmd.Parameters.AddWithValue("@ifrom", newUserNotOp.IFrom);
+            cmd.Parameters.AddWithValue("@ito", newUserNotOp.ITo);
+            cmd.Parameters.AddWithValue("@mailT", newUserNotOp.MailToggle);
+            cmd.Parameters.AddWithValue("@deskT", newUserNotOp.DesktopToggle);
+            cmd.Parameters.AddWithValue("@interval", newUserNotOp.Interval);
+            cmd.Parameters.AddWithValue("@oldMail", oldUserNotOp.Mail);
             cmd.ExecuteNonQuery();
             con.Close();
             int index = userNotificationOptionsList.IndexOf(oldUserNotOp);

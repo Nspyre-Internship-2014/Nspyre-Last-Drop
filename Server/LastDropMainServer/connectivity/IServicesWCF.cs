@@ -7,37 +7,50 @@ using System.ServiceModel;
 using System.Xml.Serialization;
 using System.IO;
 using System.Runtime.Serialization;
- 
- 
+
+
 namespace LastDropMainServer
 {
-    [ServiceContract]
-    interface IServicesWCF
+    [ServiceContract(CallbackContract = typeof(IMyServiceCallback), SessionMode = SessionMode.Required)]
+    public interface IServicesWCF
     {
         [OperationContract]
         void subscribeToPlant(string mail, string plantName);
- 
+
         [OperationContract]
         void unsubscribeToPlant(string mail, string plantName);
- 
+
         [OperationContract]
         bool registerUser(string mail, string password);
- 
-        //returns fail or the serialized userOptions as string
+
         [OperationContract]
         string logIn(string mail, string password);
- 
+
         [OperationContract]
-         Boolean setNotificationIntervals(string username, TimeSpan iFrom, TimeSpan iTo, int interval);
- 
+        Boolean setNotificationIntervals(string username, TimeSpan iFrom, TimeSpan iTo, int interval);
+
         [OperationContract]
-         void toggleMailNotifications(string username, Boolean enabled);
- 
+        void toggleMailNotifications(string username, Boolean enabled);
+
         [OperationContract]
-         void toggleDesktopNotifications(string username, Boolean enabled);
- 
-        //returns a serialized plant list as string
+        void toggleDesktopNotifications(string username, Boolean enabled);
+
         [OperationContract]
-         string getAvailablePlants(string username , string password);
+        string getAvailablePlants(string username, string password);
+
+        [OperationContract]
+        string getDryPlants(string username, string password);
+
+        [OperationContract]
+        string getSubscribedPlants(string username, string password);
+
+        [OperationContract]
+        void subscribe();
+
+        [OperationContract]
+        void unsubscribe();
+
+
     }
 }
+

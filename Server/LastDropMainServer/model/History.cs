@@ -9,6 +9,7 @@ namespace LastDropMainServer
     [Serializable]
     public class History
     {
+        #pragma warning disable 0169
         private string plantName;
         private DateTime wateredOn;
 
@@ -21,7 +22,7 @@ namespace LastDropMainServer
             this.WateredOn = WateredOn;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return this.PlantName + " " + this.WateredOn;
         }
@@ -38,7 +39,7 @@ namespace LastDropMainServer
             return (this.PlantName == h.PlantName) && (this.WateredOn == h.WateredOn);
         }
 
-        public string PlantName{ get; set; }
+        public string PlantName { get; set; }
 
         public DateTime WateredOn { get; set; }
     }

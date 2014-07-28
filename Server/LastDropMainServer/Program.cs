@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Diagnostics;
 
 namespace LastDropMainServer
 {
@@ -20,29 +20,17 @@ namespace LastDropMainServer
             OperationController controller = new OperationController();
 
             //Every 10 second, the data collector updates the database
-            SensorDataCollection sensorDataCollection = new SensorDataCollection(controller, new TimeSpan(0, 10, 0));
+            SensorDataCollection sensorDataCollection = new SensorDataCollection(controller, new TimeSpan(0, 0, 10));
+            
+            //Every 5 hours, check if there are any dry plants and send the mails when necessary
+            AutomaticEMailSender autoEmailSender = new AutomaticEMailSender(9999999, controller);
 
 
             //Run the main app
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainGUI(controller));
-
+            
         }
     }
 }
-
-/*        
-          try
-          {
-              while (true)
-              {
-                  SensorDataCollection sensorDataCollection = new SensorDataCollection(controller, new TimeSpan(0, 10, 0));
-                  break;
-              }
-          }
-          catch (Exception e)
-          {
-              MessageBox.Show("The arduino board is not connected to this computer. Please reconnect it and resume the program.");
-          }
-           */

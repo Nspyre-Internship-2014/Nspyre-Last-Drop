@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Net;
+using System.Configuration;
 
 namespace LastDropMainServer
 {
@@ -16,11 +17,16 @@ namespace LastDropMainServer
 
         public OperationController()
         {
-            repository = new DatabaseRepository("Data Source=LPT0902\\SQLEXPRESS;Initial Catalog=LastDropDB;Integrated Security=true");
+            //Requires this: http://stackoverflow.com/questions/851783/system-configuration-configurationmanager-not-available
+            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["LastDropDB"].ConnectionString;
+            repository = new DatabaseRepository(connectionString);
         }
 
         public void subscribeToPlant(String MailS, String plantName)
         {
+            repository.refreshUserList();
+            repository.refreshPlantList();
+            repository.refreshSubscriberList();
             List<User> users = repository.UserList;
             List<Plant> plants = repository.PlantList;
             List<Subscriber> subscribers = repository.SubscriberList;
@@ -41,13 +47,19 @@ namespace LastDropMainServer
             }
 
             if (okp && oku && available)
+            {
                 s = new Subscriber(MailS, plantName);
-            repository.addSubscriber(s);
+                repository.addSubscriber(s);
+            }
+
 
         }
 
         public void UnsubscribeFromPlant(string MailS, String plantName)
         {
+            repository.refreshUserList();
+            repository.refreshPlantList();
+            repository.refreshSubscriberList();
             List<Subscriber> subscribers = repository.SubscriberList;
             foreach (Subscriber sub in subscribers)
                 if (sub.PlantName == plantName && sub.MailSubscriber == MailS)
@@ -64,7 +76,12 @@ namespace LastDropMainServer
                     return false;
             }
 
+            TimeSpan t1 = new TimeSpan(9, 0, 0);
+            TimeSpan t2 = new TimeSpan(17,0,0);
+            UserNotificationOptions usop = new UserNotificationOptions(mail, t1,t2,false,false,1);
+
             repository.addUser(user1);
+            repository.addUserNotificationOptions(usop);
 
             return true;
         }
@@ -82,7 +99,7 @@ namespace LastDropMainServer
         public void sendMailNotification(Plant p)
         {
             Subscriber subscriber = getMailSubscriberByPlantName(p.Name);
-            if (p.Status == "dry")
+            if (p.Status == "2")
                 sendMail(subscriber.MailSubscriber);
         }
 
@@ -114,21 +131,30 @@ namespace LastDropMainServer
             }
         }
 
-        public bool checkPlantState(string nameplant)
+        public int checkPlantState(string nameplant)
         {
             foreach (Plant pl in repository.PlantList)
             {
                 if (pl.Name == nameplant)
+                {
+                    if (pl.Status == "2")
+                        return 2;
+                    if (pl.Status == "1")
+                        return 1;
                     if (pl.Status == "0")
-                        return false;
+                        return 0;
+                }
             }
-            return true;
+            return -1;
         }
 
         public Boolean setNotificationIntervals(string username, TimeSpan iFrom, TimeSpan iTo, int interval)
         {
             UserNotificationOptions userOptions = getUserNotificationOptions(username);
             UserNotificationOptions oldUserOptions = getUserNotificationOptions(username);
+
+            if (userOptions == null)
+                return false;
 
             userOptions.IFrom = iFrom;
             userOptions.ITo = iTo;
@@ -144,10 +170,13 @@ namespace LastDropMainServer
             UserNotificationOptions userOptions = getUserNotificationOptions(username);
             UserNotificationOptions oldUserOptions = getUserNotificationOptions(username);
 
-            userOptions.MailToggle = enabled;
+            if (userOptions != null)
+            {
+                userOptions.MailToggle = enabled;
 
-            repository.updateUserNotificationOptions(oldUserOptions, userOptions);
-
+                repository.updateUserNotificationOptions(oldUserOptions, userOptions);
+            }
+            
         }
 
         public void toggleDesktopNotifications(string username, Boolean enabled)
@@ -155,9 +184,12 @@ namespace LastDropMainServer
             UserNotificationOptions userOptions = getUserNotificationOptions(username);
             UserNotificationOptions oldUserOptions = getUserNotificationOptions(username);
 
-            userOptions.DesktopToggle = enabled;
+            if (userOptions != null)
+            {
+                userOptions.DesktopToggle = enabled;
 
-            repository.updateUserNotificationOptions(oldUserOptions, userOptions);
+                repository.updateUserNotificationOptions(oldUserOptions, userOptions);
+            }
         }
 
         private User getUserByName(string username)
@@ -171,6 +203,8 @@ namespace LastDropMainServer
         public UserNotificationOptions getUserNotificationOptions(string username)
         {
             User user = getUserByName(username);
+            if (user == null)
+                return null;
 
             foreach (UserNotificationOptions opt in repository.UserNotificationOptionsList)
                 if (opt.Mail == user.Mail)
@@ -181,8 +215,12 @@ namespace LastDropMainServer
         public List<Plant> getAvailablePlants(string name, string password)
         {
             List<Plant> availablePlants = new List<Plant>();
+            repository.refreshSubscriberList();
+            repository.refreshUserList();
+            repository.refreshPlantList();
             User us1 = getUserByName(name);
-            if (us1.Pass == password)
+
+            if (us1 != null && us1.Pass == password)
             {
 
                 foreach (Plant pl in repository.PlantList)
@@ -192,7 +230,6 @@ namespace LastDropMainServer
                     {
                         if (pl.Name == sub.PlantName && sub.MailSubscriber == name)
                         {
-                            availablePlants.Add(pl);
                             checkPlant = false;
                             break;
                         }
@@ -214,18 +251,78 @@ namespace LastDropMainServer
             return repository.UserList;
         }
 
-        public List<History> getHistoryByPlantName(String name)
+        public List<Plant> getPlantList()
         {
-            List<History> histories = repository.HistoryList;
-            List<History> historyForPlant = new List<History>();
-
-            foreach (History history in histories)
-            {
-                if (history.PlantName == name)
-                    historyForPlant.Add(history);
-            }
-
-            return historyForPlant;
+            return repository.PlantList;
         }
+
+        public void updateDatabasePlantState(Plant plant, Int32 sensorData)
+        {
+            if(sensorData>plant.DryValue)
+            {
+                Plant newPlant = new Plant(plant.Name,"2",plant.WaterAmount,plant.CoolDown,plant.DryValue,plant.HumidValue);
+                repository.updatePlant(plant, newPlant);
+            }
+            else if (sensorData >= plant.HumidValue)
+            {
+                Plant newPlant = new Plant(plant.Name, "1", plant.WaterAmount, plant.CoolDown, plant.DryValue, plant.HumidValue);
+                repository.updatePlant(plant, newPlant);
+            }
+            else 
+            {
+                Plant newPlant = new Plant(plant.Name, "0", plant.WaterAmount, plant.CoolDown, plant.DryValue, plant.HumidValue);
+                repository.updatePlant(plant, newPlant);
+            }
+        }
+
+        public List<Plant> getDryPlants(string username, string password)
+        {
+
+            List<Plant> plantList = new List<Plant>();
+            repository.refreshSubscriberList();
+            repository.refreshUserList();
+            repository.refreshPlantList();
+            User us1 = getUserByName(username);
+            if (us1 != null && us1.Pass == password)
+            {
+                foreach (Subscriber sub in repository.SubscriberList)
+                {
+                    if (sub.MailSubscriber == username)
+                    {
+                        string namePl = sub.PlantName;
+                        foreach (Plant pl in repository.PlantList)
+                        {
+                            if (pl.Name == namePl && pl.Status == "2")
+                                plantList.Add(pl);
+                        }
+                    }
+                }
+            }
+            return plantList;
+        }
+
+        public Plant getPlantByName(String name)
+        {
+            List<Plant> plants = repository.PlantList;
+            foreach (Plant plant in plants)
+                if (plant.Name == name)
+                    return plant;
+            return null;
+        }
+        public List<Plant> getSubscribedPlants(string mail, string password)
+        {
+            List<Plant> plantList = new List<Plant>();
+            User user = getUserByName(mail);
+            repository.refreshSubscriberList();
+            repository.refreshUserList();
+            repository.refreshPlantList();
+            if (user.Pass == password)
+                foreach (Subscriber subscriber in repository.SubscriberList)
+                    if (subscriber.MailSubscriber == mail)
+                        plantList.Add(getPlantByName(subscriber.PlantName));
+
+            return plantList;
+        }
+
     }
 }

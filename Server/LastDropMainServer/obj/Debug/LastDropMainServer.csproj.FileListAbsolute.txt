@@ -18,3 +18,7 @@ D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\bin\Debug\LastDropDBO
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\bin\Debug\LastDropDBOperations.pdb
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropMainServer.MainGUI.resources
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropMainServer.Properties.Resources.resources
+D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\bin\Debug\PostSharp.dll
+D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\bin\Debug\PostSharp.xml
+D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\bin\Debug\LastDropDBOperations.pssym
+D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropDBOperations.exe.postsharp

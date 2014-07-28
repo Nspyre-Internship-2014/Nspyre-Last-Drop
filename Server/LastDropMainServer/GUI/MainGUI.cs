@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace LastDropMainServer
 {
@@ -21,6 +22,8 @@ namespace LastDropMainServer
         public MainGUI(OperationController operationController)
         {
             InitializeComponent();
+            this.CenterToScreen();
+            StatusTraceAspect.textField = this.statusTextBox;
             this.controller = operationController;
         }
 
@@ -28,9 +31,10 @@ namespace LastDropMainServer
         {
             services = new ServiceInitiation();
 
-            statusTextBox.Text += "=======================================\n";
-            statusTextBox.Text += "Server Application has been initialized succesfully.\n";
-            statusTextBox.Text += "=======================================\n";
+            statusTextBox.Text += "==========================================================\n";
+            statusTextBox.Text += "                   Server Application has been initialized succesfully.\n";
+            statusTextBox.Text += "==========================================================\n";
+
         }
 
         private void serviceLaunchButton_Click(object sender, EventArgs e)
@@ -53,9 +57,9 @@ namespace LastDropMainServer
             serviceLaunchButton.Enabled = true;
         }
 
-        private void MainGUI_FormClosed(object sender, FormClosedEventArgs e)
+        private void MainGUI_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }

@@ -9,6 +9,7 @@ namespace LastDropMainServer
     [Serializable]
     public class Subscriber
     {
+        #pragma warning disable 0169
         private string mailSubscriber;
         private string plantName;
 
@@ -21,7 +22,7 @@ namespace LastDropMainServer
             this.PlantName = PlantName;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return this.MailSubscriber + " " + this.PlantName;
         }
