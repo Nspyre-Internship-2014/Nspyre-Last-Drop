@@ -1,8 +1,35 @@
+use LastDropDB
+
 insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Marinela',0,100,48,700,300)
 insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Jon',1,1000,48,700,300)
 insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Marcel',1,500,48,700,300)
 insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Megaluza',0,450,48,700,300)
 insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Alexandrina',1,700,48,700,300)
+
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plantina',1,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plop',1,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Pico',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Mixi',2,700,48,700,300)
+
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant1',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant2',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant3',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant4',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant5',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant6',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant7',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant8',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant9',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant10',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant11',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant12',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant13',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant14',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant15',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant16',2,700,48,700,300)
+insert into Plants (Name, PlantState, WaterAmount, CoolDown, DryValue, HumidValue) values ('Plant17',2,700,48,700,300)
+
+
 
 insert into Users (Mail, Pass) values ('mari@yahoo.com','maricica')
 insert into Users (Mail, Pass) values ('lazea_alina@gmail.com','alynutza')
