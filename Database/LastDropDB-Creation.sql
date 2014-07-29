@@ -14,7 +14,7 @@ add constraint pk_plants primary key (Name);
 
 create table Users(
 	Mail varchar(50) NOT NULL, 
-	Pass varchar(30)
+	Pass varchar(100)
 )
 
 alter table Users
