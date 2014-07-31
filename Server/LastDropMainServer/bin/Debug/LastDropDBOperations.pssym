@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbols xmlns="http://schemas.postsharp.org/2.0/symbols">
+  <Class Class="#1=T:[LastDropDBOperations]LastDropMainServer.StatusTraceAspect">
+    <Instance Declaration="#2=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::subscribeToPlant(System.String, System.String)" Id="2e1138432b85d821">
+      <Target>
+        <JoinPoint Description="#3=Wrapped by advice(s) OnEntry, OnSuccess, OnException, OnExit" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#4=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::unsubscribeToPlant(System.String, System.String)" Id="2e1138439924e993">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#5=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::registerUser(System.String, System.String)" Id="2e113843e1254cab">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#6=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::setNotificationIntervals(System.String, System.TimeSpan, System.TimeSpan, System.Int32)" Id="2e113843670c2972">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#7=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::toggleDesktopNotifications(System.String, System.Boolean)" Id="2e11384320d838d8">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#8=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::toggleMailNotifications(System.String, System.Boolean)" Id="2e113843ef231ad2">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#9=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::logIn(System.String, System.String)" Id="2e1138436fa0cd8c">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#10=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::getAvailablePlants(System.String, System.String)" Id="2e113843a4a1928c">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#11=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::getDryPlants(System.String, System.String)" Id="2e11384339115ad2">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#12=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::getSubscribedPlants(System.String, System.String)" Id="2e113843a5978d1f">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+  </Class>
+</Symbols>
