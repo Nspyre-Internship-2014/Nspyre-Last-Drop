@@ -5,8 +5,8 @@ create table Plants(
 	WaterAmount int,
 	CoolDown int,
 	DryValue int,
-	HumidValue int
-	
+	HumidValue int,
+	PlantID int
 )
 
 alter table Plants
