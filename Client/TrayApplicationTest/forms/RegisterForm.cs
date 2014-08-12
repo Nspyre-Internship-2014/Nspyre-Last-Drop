@@ -100,26 +100,21 @@ namespace TrayApplicationTest
                     }
                     if (result == false)
                     {
-                        MessageBox.Show("The registration failed ! Try again.");
+                        KryptonMessageBox.Show("The registration failed ! Try again.");
                         ResetForm();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please use only letters and numbers for password !" + "\n" + " Please input only letters, number, underscore and point for email !");
+                    KryptonMessageBox.Show("Please use only letters and numbers for password !" + "\n" + " Please input only letters, number, underscore and point for email !");
                     ResetForm();
                 }
             }
             else
             {
-                MessageBox.Show("Please input a valid email address !");
+                KryptonMessageBox.Show("Please input a valid email address !");
                 ResetForm();
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

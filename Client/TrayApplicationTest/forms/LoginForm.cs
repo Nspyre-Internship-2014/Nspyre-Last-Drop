@@ -36,7 +36,7 @@ namespace TrayApplicationTest
         public string getPassword() { return this.password; }
 
         public void ServerConnect()
-        {
+        {          
                 NetTcpBinding netTcp = new NetTcpBinding();
                 MyServiceCallback serviceCallback = new MyServiceCallback();
 
@@ -52,10 +52,6 @@ namespace TrayApplicationTest
             InitializeComponent();
             if (deskNot != null)
                 deskNot.printDesktopNotifications();
-        }
-   
-        private void notifyIcon2_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
         }
 
         private void takeCarePlantMenuStrip_click(object sender, EventArgs e)
@@ -112,8 +108,19 @@ namespace TrayApplicationTest
 
         public void setCredentials(string password)
         {           
-            p = password;        
-            str = serviceProvider.logIn(textBox1.Text, p);
+            p = password;
+            try
+            {
+                str = serviceProvider.logIn(textBox1.Text, p);
+            }
+            catch (Exception ex)
+            {
+                KryptonMessageBox.Show("Server unavailable. Try again later.");
+                this.Dispose();
+                System.Windows.Forms.Application.Exit();
+                Application.Exit();
+                System.Environment.Exit(1);
+            }
             this.mail = textBox1.Text;
             this.password = p;
         }
@@ -161,7 +168,7 @@ namespace TrayApplicationTest
             }
             if (str == "fail")
             {
-                MessageBox.Show("Mail or password are incorrect !");
+                KryptonMessageBox.Show("Mail or password are incorrect !");
                 textBox1.Text = "";
                 textBox2.Text = "";
             }

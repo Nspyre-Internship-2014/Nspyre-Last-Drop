@@ -73,7 +73,6 @@
             this.notifyIcon2.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon2.Icon")));
             this.notifyIcon2.Text = "Last Drop";
             this.notifyIcon2.Visible = true;
-            this.notifyIcon2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon2_MouseDoubleClick);
             // 
             // contextMenuStrip2
             // 
