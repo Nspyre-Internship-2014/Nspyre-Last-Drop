@@ -86,17 +86,17 @@
             this.kryptonPanel1.Controls.Add(this.kryptonWrapLabel2);
             this.kryptonPanel1.Controls.Add(this.kryptonWrapLabel1);
             this.kryptonPanel1.Controls.Add(this.pictureBox1);
-            this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel1.Location = new System.Drawing.Point(-4, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.kryptonPanel1.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.HeaderDockInactive;
-            this.kryptonPanel1.Size = new System.Drawing.Size(370, 285);
+            this.kryptonPanel1.Size = new System.Drawing.Size(374, 285);
             this.kryptonPanel1.TabIndex = 7;
             // 
             // kryptonWrapLabel2
             // 
             this.kryptonWrapLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.kryptonWrapLabel2.Location = new System.Drawing.Point(47, 99);
             this.kryptonWrapLabel2.Name = "kryptonWrapLabel2";
             this.kryptonWrapLabel2.Size = new System.Drawing.Size(57, 15);
@@ -105,7 +105,7 @@
             // kryptonWrapLabel1
             // 
             this.kryptonWrapLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.kryptonWrapLabel1.Location = new System.Drawing.Point(44, 47);
             this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
             this.kryptonWrapLabel1.Size = new System.Drawing.Size(60, 15);

@@ -45,7 +45,7 @@ namespace TrayApplicationTest
             ServerConnect();
             InitializeComponent();
             printDesktopNotifications();
-            notifyIcon1.MouseClick +=notifyIcon1_MouseClick;
+            notifyIcon1.DoubleClick +=notifyIcon1_DoubleClick;
         }
        
 
@@ -120,7 +120,7 @@ namespace TrayApplicationTest
         {
 
         }
-        private void notifyIcon1_MouseClick(object sender, EventArgs e)
+        private void notifyIcon1_DoubleClick(object sender, EventArgs e)
         {
             string message = null;
             List<Plant> dryPlantList;
