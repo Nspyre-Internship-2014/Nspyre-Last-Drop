@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbols xmlns="http://schemas.postsharp.org/2.0/symbols">
+  <Class Class="#1=T:[LastDropDBOperations]LastDropMainServer.StatusTraceAspect">
+    <Instance Declaration="#2=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::subscribeToPlant(System.String, System.String)" Id="2e1138437ad06e7b">
+      <Target>
+        <JoinPoint Description="#3=Wrapped by advice(s) OnEntry, OnSuccess, OnException, OnExit" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#4=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::unsubscribeToPlant(System.String, System.String)" Id="2e113843cff588de">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#5=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::registerUser(System.String, System.String)" Id="2e11384391971843">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#6=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::setNotificationIntervals(System.String, System.TimeSpan, System.TimeSpan, System.Int32)" Id="2e113843a63e8fcd">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#7=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::toggleDesktopNotifications(System.String, System.Boolean)" Id="2e113843fdd02f53">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#8=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::toggleMailNotifications(System.String, System.Boolean)" Id="2e11384355a332d2">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#9=M:[LastDropDBOperations]LastDropMainServer.WCFServicesProvider::logIn(System.String, System.String)" Id="2e113843d2ef6435">
+      <Target>
+        <JoinPoint Description="#3" />
+      </Target>
+    </Instance>
+  </Class>
+</Symbols>
