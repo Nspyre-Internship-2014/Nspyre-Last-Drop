@@ -19,6 +19,7 @@ namespace TrayApplicationTest
     {
         DuplexChannelFactory<IServicesWCF> netTcpFactory;
         IServicesWCF serviceProvider;
+        bool result;
 
         public void ServerConnect()
         {
@@ -90,8 +91,19 @@ namespace TrayApplicationTest
                 {
 
                     string p = SHA1Util.SHA1HashStringForUTF8String(textBox2.Text);
-                    bool result = serviceProvider.registerUser(textBox1.Text, p);
+                    try
+                    {
 
+                        result = serviceProvider.registerUser(textBox1.Text, p);
+                    }
+                    catch (Exception ex)
+                    {
+                        KryptonMessageBox.Show("Server unavailable. Try again later.");
+                        this.Dispose();
+                        System.Windows.Forms.Application.Exit();
+                        Application.Exit();
+                        System.Environment.Exit(1);
+                    }
                     if (result == true)
                     {
                         this.Hide();

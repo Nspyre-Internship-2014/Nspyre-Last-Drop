@@ -57,7 +57,7 @@ namespace TrayApplicationTest
             dryPlantList = getDryList();
             foreach (Plant p in dryPlantList)
             {
-                message += "Please water the plant: " + p.Name + " with the amount: " + p.WaterAmount + " !\n";
+                message += "Please water the plant: " + p.Name + " with the amount: " + p.WaterAmount + " ml !\n";
             }
             foreach (Plant p in dryPlantList)
             {
@@ -109,7 +109,7 @@ namespace TrayApplicationTest
         {
             //int interval = 60 * 60 * 1000 * uno.Interval;
             System.Threading.TimerCallback callback = new System.Threading.TimerCallback(TimerCallback);
-            t = new System.Threading.Timer(callback, null, 0, 30000);
+            t = new System.Threading.Timer(callback, null, 0, 20000);
         }
         public void StopTimer()
         {
@@ -130,7 +130,7 @@ namespace TrayApplicationTest
             {
                 foreach (Plant p in dryPlantList)
                 {
-                    message += "Please water the plant: " + p.Name + " with the amount: " + p.WaterAmount + " !\n";
+                    message += "Please water the plant: " + p.Name + " with the amount: " + p.WaterAmount + " ml !\n";
                 }
             }
             else message = "Your plants are doing fine !";
