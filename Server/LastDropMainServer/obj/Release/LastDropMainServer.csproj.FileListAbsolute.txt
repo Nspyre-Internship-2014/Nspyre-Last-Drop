@@ -11,3 +11,18 @@ D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\bin\Release\PostSharp
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\bin\Release\LastDropDBOperations.pssym
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Release\LastDropMainServer.csprojResolveAssemblyReference.cache
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Release\LastDropDBOperations.exe.postsharp
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\bin\Release\LastDropDBOperations.exe.config
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Release\LastDropDBOperations.exe
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Release\LastDropDBOperations.pdb
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\bin\Release\LastDropDBOperations.exe
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\bin\Release\LastDropDBOperations.pdb
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\bin\Release\PostSharp.dll
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\bin\Release\PostSharp.xml
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\bin\Release\LastDropDBOperations.pssym
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Release\LastDropMainServer.csprojResolveAssemblyReference.cache
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Release\LastDropMainServer.DatabaseCRUDForm.resources
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Release\LastDropMainServer.DeleteUserCredentialsGUI.resources
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Release\LastDropMainServer.MainGUI.resources
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Release\LastDropMainServer.Properties.Resources.resources
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Release\LastDropMainServer.csproj.GenerateResource.Cache
+C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Release\LastDropDBOperations.exe.postsharp

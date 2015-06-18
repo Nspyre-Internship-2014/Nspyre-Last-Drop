@@ -26,10 +26,10 @@
     <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=LPT0926\DENISAC;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=LOOP-PC;Integrated Security=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=LPT0926\DENISAC;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=LOOP-PC;Integrated Security=True</Value>
     </Setting>
     <Setting Name="username" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -37,11 +37,11 @@
     <Setting Name="password" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="serverIP" Type="System.String" Scope="User">
-      <Value Profile="(Default)">net.tcp://10.33.92.180:8021/Service1/LastDropService</Value>
-    </Setting>
     <Setting Name="keepMeSignedIn" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="serverIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">net.tcp://192.168.56.1:8021/Service1/LastDropService</Value>
     </Setting>
   </Settings>
 </SettingsFile>
