@@ -24,18 +24,3 @@ D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropDBO
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropDBOperations.pdb
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropDBOperations.exe.postsharp
 D:\Github\Nspyre-Last-Drop Local\Server\LastDropMainServer\obj\Debug\LastDropMainServer.csprojResolveAssemblyReference.cache
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\bin\Debug\LastDropDBOperations.exe.config
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Debug\LastDropDBOperations.exe
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Debug\LastDropDBOperations.pdb
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\bin\Debug\LastDropDBOperations.exe
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\bin\Debug\LastDropDBOperations.pdb
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\bin\Debug\PostSharp.dll
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\bin\Debug\PostSharp.xml
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\bin\Debug\LastDropDBOperations.pssym
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Debug\LastDropMainServer.csprojResolveAssemblyReference.cache
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Debug\LastDropMainServer.DatabaseCRUDForm.resources
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Debug\LastDropMainServer.DeleteUserCredentialsGUI.resources
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Debug\LastDropMainServer.MainGUI.resources
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Debug\LastDropMainServer.Properties.Resources.resources
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Debug\LastDropMainServer.csproj.GenerateResource.Cache
-C:\!Doc_Ionut\github\Nspyre-Last-Drop\Server\LastDropMainServer\obj\Debug\LastDropDBOperations.exe.postsharp

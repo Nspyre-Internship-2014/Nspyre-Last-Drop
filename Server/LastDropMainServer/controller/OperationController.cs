@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Net;
-using System.Reflection;
 using System.Configuration;
  
 namespace LastDropMainServer
@@ -21,16 +20,7 @@ namespace LastDropMainServer
         {
             //Requires this: http://stackoverflow.com/questions/851783/system-configuration-configurationmanager-not-available
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["LastDropDB"].ConnectionString;
-            repository = new DatabaseRepository("Data Source=LOOP-PC;Initial Catalog=LastDropDB;Integrated Security=True");//connectionString);
-            foreach (MemberInfo info in GetType().GetMembers())
-            {
-                Console.Out.WriteLine("Member name: " + info.Name);
-                Console.Out.WriteLine("Member type: " + info.MemberType);
-                Console.Out.WriteLine("Declared by: " + info.DeclaringType);
-                Console.Out.WriteLine();
-            }
-            
-
+            repository = new DatabaseRepository(connectionString);
         }
  
         public void subscribeToPlant(String MailS, String plantName)

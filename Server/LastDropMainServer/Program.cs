@@ -21,10 +21,10 @@ namespace LastDropMainServer
             WCFServicesProvider.setController(controller);
 
             //Every 10 second, the data collector updates the database
-            //SensorDataCollection sensorDataCollection = new SensorDataCollection(controller, new TimeSpan(0, 0, 10));
+            SensorDataCollection sensorDataCollection = new SensorDataCollection(controller, new TimeSpan(0, 0, 10));
            
             //Every 5 hours, check if there are any dry plants and send the mails when necessary
-            //AutomaticEMailSender autoEmailSender = new AutomaticEMailSender(controller);
+            AutomaticEMailSender autoEmailSender = new AutomaticEMailSender(controller);
 
             //Run the main app
             Application.EnableVisualStyles();

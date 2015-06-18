@@ -27,8 +27,6 @@ namespace LastDropMainServer
                     new Uri("net.tcp://" + this.findLocalIP() + ":8021/Service1"),
                     });
 
-            String uri = this.findLocalIP();
-
             NetTcpBinding netTcp = new NetTcpBinding();
             netTcp.Security.Mode = SecurityMode.None;
             host.AddServiceEndpoint(typeof(IServicesWCF),
